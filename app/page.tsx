@@ -145,7 +145,7 @@ export default function Home() {
           </p>
           <div className="heroActions">
             <a className="primaryButton" href="#work">Explore selected work <span>↘</span></a>
-            <a className="textLink" href="./Armadi_Gonta_Resume.pdf" target="_blank">View résumé ↗</a>
+            <a className="textLink" href="./Armadi_Gonta_Resume.pdf" target="_blank" data-goatcounter-click="resume-hero">View résumé ↗</a>
           </div>
           <div className="metrics" aria-label="Career highlights">
             <div><strong>7+</strong><span>Years delivering<br />mobile products</span></div>
@@ -188,7 +188,7 @@ export default function Home() {
               </>
             );
             return project.link ? (
-              <a className="projectCard" key={project.title} href={project.link} target="_blank" rel="noreferrer" aria-label={`${project.title} on the App Store`}>{card}</a>
+              <a className="projectCard" key={project.title} href={project.link} target="_blank" rel="noreferrer" aria-label={`${project.title} on the App Store`} data-goatcounter-click={`appstore-${project.title.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`}>{card}</a>
             ) : (
               <article className="projectCard" key={project.title}>{card}</article>
             );
@@ -240,8 +240,8 @@ export default function Home() {
             <div>
               <h2>Let’s build your next<br /><em>iOS product.</em></h2>
               <div className="footerActions">
-                <a className="primaryButton" href="mailto:arigonta@gmail.com">arigonta@gmail.com <span>↗</span></a>
-                <a className="outlineButton" href="./Armadi_Gonta_Resume.pdf" target="_blank">View résumé ↗</a>
+                <a className="primaryButton" href="mailto:arigonta@gmail.com" data-goatcounter-click="email-footer">arigonta@gmail.com <span>↗</span></a>
+                <a className="outlineButton" href="./Armadi_Gonta_Resume.pdf" target="_blank" data-goatcounter-click="resume-footer">View résumé ↗</a>
                 <a className="outlineButton" href="https://linkedin.com/in/arigonta" target="_blank" rel="noreferrer">LinkedIn ↗</a>
                 <a className="outlineButton" href="https://github.com/arigonta" target="_blank" rel="noreferrer">GitHub ↗</a>
               </div>

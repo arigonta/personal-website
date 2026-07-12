@@ -123,7 +123,9 @@ Timeline rows are not links; do not add decorative arrows that imply clickabilit
 - `app/globals.css`: all primary styling and responsive behavior.
 - `app/layout.tsx`: metadata, icons, and social preview configuration.
 - `public/logos/`: project logo assets.
-- `public/og.png`: social preview image.
+- `public/og.jpg`: social preview image (1200x630, keep under ~300 KB so WhatsApp renders the preview).
+- `public/favicon.svg`: "AG." monogram in the site palette.
+- `app/not-found.tsx`: branded 404 page.
 - `public/robots.txt` and `public/sitemap.xml`: SEO files pointing at the GitHub Pages URL.
 - `public/Armadi_Gonta_Resume.pdf`: downloadable resume.
 - `.github/workflows/deploy-pages.yml`: GitHub Pages deployment workflow.
