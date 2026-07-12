@@ -6,8 +6,8 @@ Public portfolio of **Armadi Gonta**, a Senior iOS Engineer based in Jakarta, In
 
 ## Highlights
 
-- **Wondr by BNI** · Greenfield digital banking, from proof-of-concept to the current App Store release
-- **Livin' by Mandiri** · Mobile banking at scale, releases R3–R7
+- **Wondr** · Greenfield digital banking, from proof-of-concept to the current App Store release
+- **Livin'** · Mobile banking at scale, releases R3–R7
 - **MyTelkomsel** · React Native refactor to the first fully native iOS release (v5.0)
 - **SingHealth EMOS v4** · Enterprise healthcare iPadOS app, delivered end to end
 
