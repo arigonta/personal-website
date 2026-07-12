@@ -235,10 +235,24 @@ export default function Home() {
 
       <footer id="contact">
         <div className="shell footerInner">
-          <p className="eyebrow"><span>Let’s connect</span> Open to meaningful conversations</p>
-          <h2>Building something<br /><em>ambitious?</em></h2>
-          <a className="email" href="mailto:arigonta@gmail.com">arigonta@gmail.com <span>↗</span></a>
-          <div className="footerBottom"><span>© 2026 Armadi Gonta</span><a href="https://linkedin.com/in/arigonta" target="_blank" rel="noreferrer">LinkedIn ↗</a><a href="https://github.com/arigonta" target="_blank" rel="noreferrer">GitHub ↗</a><a href="#top">Back to top ↑</a></div>
+          <p className="eyebrow"><span>Let’s connect</span> Open to senior iOS opportunities</p>
+          <div className="footerGrid">
+            <div>
+              <h2>Let’s build your next<br /><em>iOS product.</em></h2>
+              <div className="footerActions">
+                <a className="primaryButton" href="mailto:arigonta@gmail.com">arigonta@gmail.com <span>↗</span></a>
+                <a className="outlineButton" href="./Armadi_Gonta_Resume.pdf" target="_blank">View résumé ↗</a>
+                <a className="outlineButton" href="https://linkedin.com/in/arigonta" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+                <a className="outlineButton" href="https://github.com/arigonta" target="_blank" rel="noreferrer">GitHub ↗</a>
+              </div>
+            </div>
+            <div className="footerFacts">
+              <div><span>Location</span><p>Jakarta, Indonesia · GMT+7</p></div>
+              <div><span>Currently</span><p>Manager, iOS Dev at PT Bank Negara Indonesia (BNI)</p></div>
+              <div><span>Open to</span><p>Senior iOS engineering roles and meaningful conversations</p></div>
+            </div>
+          </div>
+          <div className="footerBottom"><span>© 2026 Armadi Gonta · Jakarta, Indonesia</span><a href="#top">Back to top ↑</a></div>
         </div>
       </footer>
     </main>

@@ -87,6 +87,14 @@ Each timeline role shows a one-line title, a short factual summary, and product 
 
 Timeline rows are not links; do not add decorative arrows that imply clickability.
 
+## Footer copy
+
+- Headline: "Let's build your next iOS product."
+- Eyebrow: "Let's connect · Open to senior iOS opportunities."
+- Primary CTA is the email button (arigonta@gmail.com), followed by outline buttons for the resume PDF, LinkedIn, and GitHub.
+- Facts column: Location "Jakarta, Indonesia · GMT+7"; Currently "Manager, iOS Dev at PT Bank Negara Indonesia (BNI)"; Open to "Senior iOS engineering roles and meaningful conversations".
+- Keep the facts column aligned with the resume facts above when roles change.
+
 ## Content rules
 
 - Site copy is written in professional English unless Armadi explicitly requests Indonesian.
