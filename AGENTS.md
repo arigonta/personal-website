@@ -81,15 +81,16 @@ Verified via the iTunes Search API. Use these exact URLs when linking project ca
 Each timeline role shows a one-line title, a short factual summary, and product chips linking the role to Selected Work. Canonical summaries (keep aligned with the facts above; do not add impact numbers):
 
 - BNI: "Managing iOS development for New Maverick Digital Delivery, continuing Wondr by BNI through the version available on the App Store today." Chips: Wondr by BNI. This row is highlighted as the current role with a "Now" badge.
-- Accenture: "Led iOS work on banking engagements — Livin' by Mandiri across releases R3–R7, then Wondr by BNI from its initial proof-of-concept." Chips: Livin' by Mandiri, Wondr by BNI.
+- Accenture: "Led iOS work on banking engagements: Livin' by Mandiri across releases R3–R7, then Wondr by BNI from its initial proof-of-concept." Chips: Livin' by Mandiri, Wondr by BNI.
 - Allianz Indonesia: "iOS engineering for insurance products." No chips.
-- Pegipegi · PHINCON · Krakatau IT: "Early career across travel, telco, and IT services — including the MyTelkomsel refactor from React Native to its first fully native iOS release." Chips: MyTelkomsel.
+- Pegipegi · PHINCON · Krakatau IT: "Early career across travel, telco, and IT services, including the MyTelkomsel refactor from React Native to its first fully native iOS release." Chips: MyTelkomsel.
 
 Timeline rows are not links; do not add decorative arrows that imply clickability.
 
 ## Content rules
 
 - Site copy is written in professional English unless Armadi explicitly requests Indonesian.
+- Never use em dashes (—) anywhere in site copy, headings, roles, or metadata. Armadi considers them an AI-writing tell. Rewrite with commas, colons, periods, or middle dots (·). Date and release ranges use an en dash (e.g. "Jun 2023 – Present", "R3–R7").
 - Use first-person copy only in the hero/introduction. Project cards should use concise factual descriptions.
 - Avoid unsupported impact numbers and exaggerated claims.
 - Keep company and product capitalization exact: Wondr by BNI, Livin' by Mandiri, MyTelkomsel, and SingHealth EMOS v4.

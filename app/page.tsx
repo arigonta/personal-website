@@ -7,7 +7,7 @@ const projects = [
     logoHeight: 336,
     link: "https://apps.apple.com/id/app/wondr-by-bni/id6499518320",
     type: "Greenfield digital banking",
-    period: "Jun 2023 — Present",
+    period: "Jun 2023 – Present",
     role: "Senior iOS Engineer · From inception to current App Store release",
     summary:
       "Helped build the iOS application from scratch and continue developing it through the version available on the App Store today, spanning proof-of-concept, architecture, security, CI/CD, feature delivery, launch, and ongoing production evolution.",
@@ -21,7 +21,7 @@ const projects = [
     logoHeight: 495,
     link: "https://apps.apple.com/id/app/livin-by-mandiri/id1555414743",
     type: "Mobile banking at scale",
-    period: "Sep 2022 — Jun 2023",
+    period: "Sep 2022 – Jun 2023",
     role: "Senior iOS Engineer · Releases R3–R7",
     summary:
       "Joined the established Livin’ by Mandiri product during releases R3 through R7, contributing to feature development, stability, analytics integration, iOS compatibility, and banking security across the existing codebase.",
@@ -35,7 +35,7 @@ const projects = [
     logoHeight: 288,
     link: "https://apps.apple.com/id/app/mytelkomsel/id651412430",
     type: "Native platform migration",
-    period: "Apr 2019 — Nov 2019",
+    period: "Apr 2019 – Nov 2019",
     role: "iOS Engineer · React Native refactor to native iOS 5.0",
     summary:
       "Joined the refactor initiative that moved MyTelkomsel from React Native to its first fully native iOS release, version 5.0, contributing to implementation, feature delivery, platform performance, and maintainability.",
@@ -49,7 +49,7 @@ const projects = [
     logoHeight: 355,
     link: null,
     type: "Enterprise healthcare · iPadOS",
-    period: "Nov 2024 — Present",
+    period: "Nov 2024 – Present",
     role: "Sole iPadOS Engineer · End-to-end delivery",
     summary:
       "Independently built the EMOS v4 iPad application end to end, owning the iPadOS architecture, implementation, integration, quality, and release readiness for enterprise healthcare workflows.",
@@ -59,37 +59,37 @@ const projects = [
 
 const experience = [
   {
-    period: "2024 — Now",
+    period: "2024 – Now",
     company: "PT Bank Negara Indonesia (BNI)",
-    role: "Manager — iOS Dev, New Maverick Digital Delivery",
+    role: "Manager, iOS Dev · New Maverick Digital Delivery",
     summary:
       "Managing iOS development for New Maverick Digital Delivery, continuing Wondr by BNI through the version available on the App Store today.",
     products: ["Wondr by BNI"],
     current: true,
   },
   {
-    period: "2022 — 2024",
+    period: "2022 – 2024",
     company: "Accenture",
     role: "Business & Integration Arch Specialist / iOS Team Lead",
     summary:
-      "Led iOS work on banking engagements — Livin’ by Mandiri across releases R3–R7, then Wondr by BNI from its initial proof-of-concept.",
+      "Led iOS work on banking engagements: Livin’ by Mandiri across releases R3–R7, then Wondr by BNI from its initial proof-of-concept.",
     products: ["Livin’ by Mandiri", "Wondr by BNI"],
     current: false,
   },
   {
-    period: "2020 — 2022",
+    period: "2020 – 2022",
     company: "Allianz Indonesia",
-    role: "iOS Engineer — Assistant Manager",
+    role: "iOS Engineer · Assistant Manager",
     summary: "iOS engineering for insurance products.",
     products: [],
     current: false,
   },
   {
-    period: "2017 — 2020",
+    period: "2017 – 2020",
     company: "Pegipegi · PHINCON · Krakatau IT",
     role: "iOS Engineer / Developer",
     summary:
-      "Early career across travel, telco, and IT services — including the MyTelkomsel refactor from React Native to its first fully native iOS release.",
+      "Early career across travel, telco, and IT services, including the MyTelkomsel refactor from React Native to its first fully native iOS release.",
     products: ["MyTelkomsel"],
     current: false,
   },
@@ -114,7 +114,7 @@ export default function Home() {
           <a href="#experience">Experience</a>
           <a href="#contact">Contact</a>
         </div>
-        <a className="status" href="mailto:arigonta@gmail.com" aria-label="Email Armadi Gonta — available to connect">
+        <a className="status" href="mailto:arigonta@gmail.com" aria-label="Email Armadi Gonta, available to connect">
           <i /> Available to connect
         </a>
         <details className="mobileMenu">
@@ -138,10 +138,10 @@ export default function Home() {
           <p className="eyebrow"><span>Senior iOS Engineer</span> Jakarta, Indonesia</p>
           <h1>Mobile systems<br />that <em>scale.</em></h1>
           <p className="intro">
-            I’m Armadi Gonta — a Senior iOS Engineer with 7+ years building secure, high-scale products across digital banking, fintech, insurance, telco, and travel.
+            I’m Armadi Gonta, a Senior iOS Engineer with 7+ years building secure, high-scale products across digital banking, fintech, insurance, telco, and travel.
           </p>
           <p className="intro introSecondary">
-            Most recently I helped build Wondr by BNI from proof-of-concept to its current App Store release, and independently delivered the SingHealth EMOS v4 iPadOS app — with a focus on architecture, app security, and release readiness.
+            Most recently I helped build Wondr by BNI from proof-of-concept to its current App Store release, and independently delivered the SingHealth EMOS v4 iPadOS app, with a focus on architecture, app security, and release readiness.
           </p>
           <div className="heroActions">
             <a className="primaryButton" href="#work">Explore selected work <span>↘</span></a>
@@ -201,7 +201,7 @@ export default function Home() {
           <p>02 / Experience</p>
           <h2>From implementation<br />to <em>direction.</em></h2>
           <p className="sectionNote">
-            Seven-plus years across banking, insurance, telco, and travel — from hands-on feature work to leading iOS teams and owning delivery end to end.
+            Seven-plus years across banking, insurance, telco, and travel, from hands-on feature work to leading iOS teams and owning delivery end to end.
           </p>
         </div>
         <div className="timeline">
