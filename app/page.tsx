@@ -58,7 +58,7 @@ export default function Home() {
           </p>
           <div className="heroActions">
             <a className="primaryButton" href="#work">Explore selected work <span>↘</span></a>
-            <a className="textLink" href="/Armadi_Gonta_Resume.pdf" target="_blank">View résumé ↗</a>
+            <a className="textLink" href="./Armadi_Gonta_Resume.pdf" target="_blank">View résumé ↗</a>
           </div>
           <div className="metrics" aria-label="Career highlights">
             <div><strong>7+</strong><span>Years delivering<br />mobile products</span></div>
