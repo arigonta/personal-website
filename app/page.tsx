@@ -4,9 +4,9 @@ const projects = [
     title: "Wondr by BNI",
     logo: "./logos/wondr-bni.png",
     type: "Greenfield digital banking",
-    role: "Senior iOS Engineer · Core development team",
+    role: "Senior iOS Engineer · From inception to current App Store release",
     summary:
-      "Helped build the iOS application from scratch, contributing from tender and proof-of-concept through architecture, security, CI/CD, feature delivery, release readiness, and production launch.",
+      "Helped build the iOS application from scratch and continue developing it through the version available on the App Store today, spanning proof-of-concept, architecture, security, CI/CD, feature delivery, launch, and ongoing production evolution.",
     tags: ["Architecture", "App Security", "CI/CD", "Leadership"],
   },
   {
@@ -14,9 +14,9 @@ const projects = [
     title: "Livin’ by Mandiri",
     logo: "./logos/livin-mandiri.png",
     type: "Mobile banking at scale",
-    role: "Senior iOS Engineer · Ongoing development",
+    role: "Senior iOS Engineer · Releases R3–R7",
     summary:
-      "Joined an established product mid-development and contributed to feature improvements, stability, analytics integration, iOS compatibility, and banking security across the existing codebase.",
+      "Joined the established Livin’ by Mandiri product during releases R3 through R7, contributing to feature development, stability, analytics integration, iOS compatibility, and banking security across the existing codebase.",
     tags: ["Swift", "Analytics", "Performance", "Fintech"],
   },
   {
@@ -24,9 +24,9 @@ const projects = [
     title: "MyTelkomsel",
     logo: "./logos/mytelkomsel.jpg",
     type: "Native platform migration",
-    role: "iOS Engineer · Native development",
+    role: "iOS Engineer · React Native refactor to native iOS 5.0",
     summary:
-      "Joined the product mid-development and contributed to its transition from React Native to native iOS, feature delivery, platform performance, and long-term maintainability.",
+      "Joined the refactor initiative that moved MyTelkomsel from React Native to its first fully native iOS release, version 5.0, contributing to implementation, feature delivery, platform performance, and maintainability.",
     tags: ["Native iOS", "Migration", "Performance", "Telco"],
   },
   {
