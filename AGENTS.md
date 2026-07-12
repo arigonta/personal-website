@@ -25,6 +25,7 @@ Use these facts as the source of truth. Preserve the distinctions between joinin
 
 ### Wondr by BNI
 
+- Project period: June 2023 to present.
 - Role: Senior iOS Engineer; core development team.
 - Armadi helped build the iOS application from scratch.
 - His involvement spans the initial proof-of-concept, architecture, app security, CI/CD, feature delivery, release readiness, production launch, production support, and continued development through the version currently available on the App Store.
@@ -33,6 +34,7 @@ Use these facts as the source of truth. Preserve the distinctions between joinin
 
 ### Livin' by Mandiri
 
+- Project period: September 2022 to June 2023.
 - Role: Senior iOS Engineer working on an established product.
 - Armadi joined during the middle of development and contributed specifically across releases R3 through R7.
 - Contributions include feature development, stability improvements, analytics integration, iOS compatibility, and banking security requirements.
@@ -40,6 +42,7 @@ Use these facts as the source of truth. Preserve the distinctions between joinin
 
 ### MyTelkomsel
 
+- Project period: April 2019 to November 2019.
 - Role: iOS Engineer on the native refactor initiative.
 - Armadi joined during development for the refactor from React Native to the first native iOS release, version 5.0.
 - Contributions include native implementation, feature delivery, platform performance, and maintainability.
@@ -47,6 +50,7 @@ Use these facts as the source of truth. Preserve the distinctions between joinin
 
 ### SingHealth EMOS v4
 
+- Project period: November 2024 to present.
 - Product name: SingHealth EMOS v4. Do not call it SingHealth PBT.
 - Role: Sole iPadOS Engineer; end-to-end delivery.
 - Armadi independently built the iPad application.

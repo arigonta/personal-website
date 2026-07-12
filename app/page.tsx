@@ -4,6 +4,7 @@ const projects = [
     title: "Wondr by BNI",
     logo: "./logos/wondr-bni.png",
     type: "Greenfield digital banking",
+    period: "Jun 2023 — Present",
     role: "Senior iOS Engineer · From inception to current App Store release",
     summary:
       "Helped build the iOS application from scratch and continue developing it through the version available on the App Store today, spanning proof-of-concept, architecture, security, CI/CD, feature delivery, launch, and ongoing production evolution.",
@@ -14,6 +15,7 @@ const projects = [
     title: "Livin’ by Mandiri",
     logo: "./logos/livin-mandiri.png",
     type: "Mobile banking at scale",
+    period: "Sep 2022 — Jun 2023",
     role: "Senior iOS Engineer · Releases R3–R7",
     summary:
       "Joined the established Livin’ by Mandiri product during releases R3 through R7, contributing to feature development, stability, analytics integration, iOS compatibility, and banking security across the existing codebase.",
@@ -24,6 +26,7 @@ const projects = [
     title: "MyTelkomsel",
     logo: "./logos/mytelkomsel.jpg",
     type: "Native platform migration",
+    period: "Apr 2019 — Nov 2019",
     role: "iOS Engineer · React Native refactor to native iOS 5.0",
     summary:
       "Joined the refactor initiative that moved MyTelkomsel from React Native to its first fully native iOS release, version 5.0, contributing to implementation, feature delivery, platform performance, and maintainability.",
@@ -34,6 +37,7 @@ const projects = [
     title: "SingHealth EMOS v4",
     logo: "./logos/singhealth.png",
     type: "Enterprise healthcare · iPadOS",
+    period: "Nov 2024 — Present",
     role: "Sole iPadOS Engineer · End-to-end delivery",
     summary:
       "Independently built the EMOS v4 iPad application end to end, owning the iPadOS architecture, implementation, integration, quality, and release readiness for enterprise healthcare workflows.",
@@ -110,8 +114,8 @@ export default function Home() {
           {projects.map((project) => (
             <article className="projectCard" key={project.title}>
               <div className="cardHeader"><span>{project.index}</span><i>↗</i></div>
-              <div className="projectMark"><img src={project.logo} alt={`${project.title} logo`} /><div className="signalLines"><i /><i /><i /></div></div>
-              <p className="projectType">{project.type}</p><h3>{project.title}</h3><p className="projectRole"><span>Role</span>{project.role}</p><p>{project.summary}</p>
+              <div className="projectMark"><img src={project.logo} alt={`${project.title} logo`} loading="lazy" decoding="async" /><div className="signalLines"><i /><i /><i /></div></div>
+              <div className="projectMeta"><p className="projectType">{project.type}</p><time>{project.period}</time></div><h3>{project.title}</h3><p className="projectRole"><span>Role</span>{project.role}</p><p>{project.summary}</p>
               <div className="tags">{project.tags.map((tag) => <span key={tag}>{tag}</span>)}</div>
             </article>
           ))}
