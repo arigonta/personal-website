@@ -3,6 +3,9 @@ const projects = [
     index: "01",
     title: "Wondr by BNI",
     logo: "./logos/wondr-bni.png",
+    logoWidth: 960,
+    logoHeight: 336,
+    link: "https://apps.apple.com/id/app/wondr-by-bni/id6499518320",
     type: "Greenfield digital banking",
     period: "Jun 2023 — Present",
     role: "Senior iOS Engineer · From inception to current App Store release",
@@ -14,6 +17,9 @@ const projects = [
     index: "02",
     title: "Livin’ by Mandiri",
     logo: "./logos/livin-mandiri.png",
+    logoWidth: 700,
+    logoHeight: 495,
+    link: "https://apps.apple.com/id/app/livin-by-mandiri/id1555414743",
     type: "Mobile banking at scale",
     period: "Sep 2022 — Jun 2023",
     role: "Senior iOS Engineer · Releases R3–R7",
@@ -24,7 +30,10 @@ const projects = [
   {
     index: "03",
     title: "MyTelkomsel",
-    logo: "./logos/mytelkomsel.jpg",
+    logo: "./logos/mytelkomsel.png",
+    logoWidth: 288,
+    logoHeight: 288,
+    link: "https://apps.apple.com/id/app/mytelkomsel/id651412430",
     type: "Native platform migration",
     period: "Apr 2019 — Nov 2019",
     role: "iOS Engineer · React Native refactor to native iOS 5.0",
@@ -36,6 +45,9 @@ const projects = [
     index: "04",
     title: "SingHealth EMOS v4",
     logo: "./logos/singhealth.png",
+    logoWidth: 320,
+    logoHeight: 355,
+    link: null,
     type: "Enterprise healthcare · iPadOS",
     period: "Nov 2024 — Present",
     role: "Sole iPadOS Engineer · End-to-end delivery",
@@ -52,9 +64,16 @@ const experience = [
   ["2017 — 2020", "Pegipegi · PHINCON · Krakatau IT", "iOS Engineer / Developer"],
 ];
 
+const capabilities: [string, string[]][] = [
+  ["Language & UI", ["Swift", "SwiftUI", "UIKit", "Combine", "Objective-C"]],
+  ["Architecture & Quality", ["MVVM", "MVP", "VIPER", "App Security", "XCTest & XCUITest"]],
+  ["Delivery & Leadership", ["CI/CD", "Fastlane", "GitHub Actions", "Jenkins", "Release Governance", "Mentoring"]],
+];
+
 export default function Home() {
   return (
     <main>
+      <a className="skipLink" href="#work">Skip to content</a>
       <nav className="nav shell" aria-label="Primary navigation">
         <a className="brand" href="#top" aria-label="Armadi Gonta home">
           AG<span>.</span>
@@ -67,7 +86,21 @@ export default function Home() {
         <a className="status" href="mailto:arigonta@gmail.com">
           <i /> Available to connect
         </a>
+        <details className="mobileMenu">
+          <summary aria-label="Open navigation menu">Menu</summary>
+          <div className="mobileLinks">
+            <a href="#work">Selected work</a>
+            <a href="#experience">Experience</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </details>
       </nav>
+      <script
+        dangerouslySetInnerHTML={{
+          __html:
+            "document.addEventListener('click',function(e){var a=e.target.closest('.mobileLinks a');if(a)a.closest('details').removeAttribute('open')});",
+        }}
+      />
 
       <section className="hero shell" id="top">
         <div className="heroCopy">
@@ -76,6 +109,9 @@ export default function Home() {
           <p className="intro">
             I’m Armadi Gonta — a Senior iOS Engineer with 7+ years building secure, high-scale products across digital banking, fintech, insurance, telco, and travel.
           </p>
+          <p className="intro introSecondary">
+            Most recently I helped build Wondr by BNI from proof-of-concept to its current App Store release, and independently delivered the SingHealth EMOS v4 iPadOS app — with a focus on architecture, app security, and release readiness.
+          </p>
           <div className="heroActions">
             <a className="primaryButton" href="#work">Explore selected work <span>↘</span></a>
             <a className="textLink" href="./Armadi_Gonta_Resume.pdf" target="_blank">View résumé ↗</a>
@@ -83,7 +119,7 @@ export default function Home() {
           <div className="metrics" aria-label="Career highlights">
             <div><strong>7+</strong><span>Years delivering<br />mobile products</span></div>
             <div><strong>5</strong><span>Enterprise<br />product domains</span></div>
-            <div><strong>01</strong><span>Focus: resilient<br />mobile systems</span></div>
+            <div><strong>4</strong><span>Flagship apps<br />banking · telco · health</span></div>
           </div>
         </div>
 
@@ -111,14 +147,21 @@ export default function Home() {
       <section className="workSection shell" id="work">
         <div className="sectionHeading"><p>01 / Selected work</p><h2>Products built for<br /><em>real-world scale.</em></h2></div>
         <div className="projectGrid">
-          {projects.map((project) => (
-            <article className="projectCard" key={project.title}>
-              <div className="cardHeader"><span>{project.index}</span><i>↗</i></div>
-              <div className="projectMark"><img src={project.logo} alt={`${project.title} logo`} loading="lazy" decoding="async" /><div className="signalLines"><i /><i /><i /></div></div>
-              <div className="projectMeta"><p className="projectType">{project.type}</p><time>{project.period}</time></div><h3>{project.title}</h3><p className="projectRole"><span>Role</span>{project.role}</p><p>{project.summary}</p>
-              <div className="tags">{project.tags.map((tag) => <span key={tag}>{tag}</span>)}</div>
-            </article>
-          ))}
+          {projects.map((project) => {
+            const card = (
+              <>
+                <div className="cardHeader"><span>{project.index}</span><i>{project.link ? "App Store ↗" : "Enterprise"}</i></div>
+                <div className="projectMark"><img src={project.logo} alt={`${project.title} logo`} width={project.logoWidth} height={project.logoHeight} loading="lazy" decoding="async" /><div className="signalLines"><i /><i /><i /></div></div>
+                <div className="projectMeta"><p className="projectType">{project.type}</p><time>{project.period}</time></div><h3>{project.title}</h3><p className="projectRole"><span>Role</span>{project.role}</p><p>{project.summary}</p>
+                <div className="tags">{project.tags.map((tag) => <span key={tag}>{tag}</span>)}</div>
+              </>
+            );
+            return project.link ? (
+              <a className="projectCard" key={project.title} href={project.link} target="_blank" rel="noreferrer" aria-label={`${project.title} on the App Store`}>{card}</a>
+            ) : (
+              <article className="projectCard" key={project.title}>{card}</article>
+            );
+          })}
         </div>
       </section>
 
@@ -131,8 +174,13 @@ export default function Home() {
 
       <section className="capabilities shell">
         <p className="eyebrow"><span>Core capabilities</span> Systems thinking, end to end</p>
-        <div className="capabilityList">
-          <span>Swift</span><span>SwiftUI</span><span>UIKit</span><span>Combine</span><span>Architecture</span><span>App Security</span><span>CI/CD</span><span>Mentoring</span><span>Release Governance</span>
+        <div className="capabilityGroups">
+          {capabilities.map(([group, items]) => (
+            <div className="capabilityGroup" key={group}>
+              <p>{group}</p>
+              <div className="capabilityList">{items.map((item) => <span key={item}>{item}</span>)}</div>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -141,7 +189,7 @@ export default function Home() {
           <p className="eyebrow"><span>Let’s connect</span> Open to meaningful conversations</p>
           <h2>Building something<br /><em>ambitious?</em></h2>
           <a className="email" href="mailto:arigonta@gmail.com">arigonta@gmail.com <span>↗</span></a>
-          <div className="footerBottom"><span>© 2026 Armadi Gonta</span><a href="https://linkedin.com/in/arigonta" target="_blank" rel="noreferrer">LinkedIn ↗</a><a href="#top">Back to top ↑</a></div>
+          <div className="footerBottom"><span>© 2026 Armadi Gonta</span><a href="https://linkedin.com/in/arigonta" target="_blank" rel="noreferrer">LinkedIn ↗</a><a href="https://github.com/arigonta" target="_blank" rel="noreferrer">GitHub ↗</a><a href="#top">Back to top ↑</a></div>
         </div>
       </footer>
     </main>

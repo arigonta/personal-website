@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://arigonta.github.io/personal-website/sitemap.xml
