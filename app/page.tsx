@@ -107,14 +107,14 @@ export default function Home() {
       <a className="skipLink" href="#work">Skip to content</a>
       <nav className="nav shell" aria-label="Primary navigation">
         <a className="brand" href="#top" aria-label="Armadi Gonta home">
-          AG<span>.</span>
+          Armadi Gonta<span>.</span>
         </a>
         <div className="navLinks">
           <a href="#work">Selected work</a>
           <a href="#experience">Experience</a>
           <a href="#contact">Contact</a>
         </div>
-        <a className="status" href="mailto:arigonta@gmail.com">
+        <a className="status" href="mailto:arigonta@gmail.com" aria-label="Email Armadi Gonta — available to connect">
           <i /> Available to connect
         </a>
         <details className="mobileMenu">
