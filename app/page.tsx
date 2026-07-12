@@ -4,8 +4,9 @@ const projects = [
     title: "Wondr by BNI",
     logo: "./logos/wondr-bni.png",
     type: "Greenfield digital banking",
+    role: "Senior iOS Engineer · Core development team",
     summary:
-      "Built the iOS foundation from tender and proof-of-concept through architecture, security, CI/CD, release readiness, and production launch.",
+      "Helped build the iOS application from scratch, contributing from tender and proof-of-concept through architecture, security, CI/CD, feature delivery, release readiness, and production launch.",
     tags: ["Architecture", "App Security", "CI/CD", "Leadership"],
   },
   {
@@ -13,8 +14,9 @@ const projects = [
     title: "Livin’ by Mandiri",
     logo: "./logos/livin-mandiri.png",
     type: "Mobile banking at scale",
+    role: "Senior iOS Engineer · Ongoing development",
     summary:
-      "Improved stability, analytics integration, iOS compatibility, feature delivery, and banking security for a high-scale mobile platform.",
+      "Joined an established product mid-development and contributed to feature improvements, stability, analytics integration, iOS compatibility, and banking security across the existing codebase.",
     tags: ["Swift", "Analytics", "Performance", "Fintech"],
   },
   {
@@ -22,18 +24,20 @@ const projects = [
     title: "MyTelkomsel",
     logo: "./logos/mytelkomsel.jpg",
     type: "Native platform migration",
+    role: "iOS Engineer · Native development",
     summary:
-      "Helped move the application from React Native to native iOS, strengthening platform performance and long-term maintainability.",
+      "Joined the product mid-development and contributed to its transition from React Native to native iOS, feature delivery, platform performance, and long-term maintainability.",
     tags: ["Native iOS", "Migration", "Performance", "Telco"],
   },
   {
     index: "04",
-    title: "SingHealth PBT",
+    title: "SingHealth EMOS v4",
     logo: "./logos/singhealth.png",
-    type: "Enterprise healthcare",
+    type: "Enterprise healthcare · iPadOS",
+    role: "Sole iPadOS Engineer · End-to-end delivery",
     summary:
-      "Developed iOS capabilities for a SingHealth healthcare application, supporting reliable workflows, maintainable architecture, and secure enterprise delivery.",
-    tags: ["iOS", "Healthcare", "Enterprise", "Singapore"],
+      "Independently built the EMOS v4 iPad application end to end, owning the iPadOS architecture, implementation, integration, quality, and release readiness for enterprise healthcare workflows.",
+    tags: ["iPadOS", "Swift", "Healthcare", "End-to-end"],
   },
 ];
 
@@ -107,7 +111,7 @@ export default function Home() {
             <article className="projectCard" key={project.title}>
               <div className="cardHeader"><span>{project.index}</span><i>↗</i></div>
               <div className="projectMark"><img src={project.logo} alt={`${project.title} logo`} /><div className="signalLines"><i /><i /><i /></div></div>
-              <p className="projectType">{project.type}</p><h3>{project.title}</h3><p>{project.summary}</p>
+              <p className="projectType">{project.type}</p><h3>{project.title}</h3><p className="projectRole"><span>Role</span>{project.role}</p><p>{project.summary}</p>
               <div className="tags">{project.tags.map((tag) => <span key={tag}>{tag}</span>)}</div>
             </article>
           ))}
