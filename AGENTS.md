@@ -57,13 +57,35 @@ Use these facts as the source of truth. Preserve the distinctions between joinin
 - Contributions include iPadOS architecture, implementation, integration, quality, and release readiness for enterprise healthcare workflows.
 - Prefer "iPadOS" over "iPad iOS" in polished copy.
 
+## Public App Store links
+
+Verified via the iTunes Search API. Use these exact URLs when linking project cards.
+
+- Wondr by BNI: https://apps.apple.com/id/app/wondr-by-bni/id6499518320
+- Livin' by Mandiri: https://apps.apple.com/id/app/livin-by-mandiri/id1555414743
+- MyTelkomsel: https://apps.apple.com/id/app/mytelkomsel/id651412430
+- SingHealth EMOS v4 is an internal enterprise app with no public App Store listing. Do not fabricate a link; its card is labeled "Enterprise".
+
 ## Other resume facts
 
 - Current: PT Bank Negara Indonesia (BNI), Manager - iOS Dev, New Maverick Digital Delivery, September 2024 to present.
 - Accenture: Business & Integration Arch Specialist / iOS Team Lead, September 2022 to August 2024.
 - Allianz Indonesia: iOS Engineer - Assistant Manager, June 2020 to August 2022.
 - Earlier experience includes Pegipegi, PHINCON, and PT Krakatau Information Technology.
+- Timeline note: Livin' by Mandiri (Sep 2022 – Jun 2023) and the Wondr by BNI proof-of-concept onward (from Jun 2023) were delivered during the Accenture tenure; Wondr development continues under the BNI role (Sep 2024 – present).
+- The employer for SingHealth EMOS v4 is not documented. Do not attribute it to any company row in the experience timeline.
 - Core technologies include Swift, UIKit, SwiftUI, Combine, Objective-C, MVVM, MVP, VIPER, REST APIs, XCTest, XCUITest, Fastlane, Jenkins, GitHub Actions, CocoaPods, Swift Package Manager, and Firebase.
+
+## Experience section copy
+
+Each timeline role shows a one-line title, a short factual summary, and product chips linking the role to Selected Work. Canonical summaries (keep aligned with the facts above; do not add impact numbers):
+
+- BNI: "Managing iOS development for New Maverick Digital Delivery, continuing Wondr by BNI through the version available on the App Store today." Chips: Wondr by BNI. This row is highlighted as the current role with a "Now" badge.
+- Accenture: "Led iOS work on banking engagements — Livin' by Mandiri across releases R3–R7, then Wondr by BNI from its initial proof-of-concept." Chips: Livin' by Mandiri, Wondr by BNI.
+- Allianz Indonesia: "iOS engineering for insurance products." No chips.
+- Pegipegi · PHINCON · Krakatau IT: "Early career across travel, telco, and IT services — including the MyTelkomsel refactor from React Native to its first fully native iOS release." Chips: MyTelkomsel.
+
+Timeline rows are not links; do not add decorative arrows that imply clickability.
 
 ## Content rules
 
@@ -74,6 +96,7 @@ Use these facts as the source of truth. Preserve the distinctions between joinin
 - Keep the resume download and contact links working.
 - Do not add confidential implementation details, internal endpoints, credentials, client data, or unreleased product information.
 - Never commit tokens, passwords, private keys, or GitHub credentials. If a credential appears in chat or terminal output, instruct the user to revoke it immediately.
+- `app/layout.tsx` embeds JSON-LD Person structured data and a GoatCounter analytics script (site code `arigonta`). Keep both when editing the layout.
 
 ## Visual direction
 
@@ -92,6 +115,7 @@ Use these facts as the source of truth. Preserve the distinctions between joinin
 - `app/layout.tsx`: metadata, icons, and social preview configuration.
 - `public/logos/`: project logo assets.
 - `public/og.png`: social preview image.
+- `public/robots.txt` and `public/sitemap.xml`: SEO files pointing at the GitHub Pages URL.
 - `public/Armadi_Gonta_Resume.pdf`: downloadable resume.
 - `.github/workflows/deploy-pages.yml`: GitHub Pages deployment workflow.
 - `next.config.ts`: static export and GitHub Pages base path.

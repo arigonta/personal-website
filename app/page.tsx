@@ -58,10 +58,41 @@ const projects = [
 ];
 
 const experience = [
-  ["2024 — Now", "PT Bank Negara Indonesia (BNI)", "Manager — iOS Dev, New Maverick Digital Delivery"],
-  ["2022 — 2024", "Accenture", "Business & Integration Arch Specialist / iOS Team Lead"],
-  ["2020 — 2022", "Allianz Indonesia", "iOS Engineer — Assistant Manager"],
-  ["2017 — 2020", "Pegipegi · PHINCON · Krakatau IT", "iOS Engineer / Developer"],
+  {
+    period: "2024 — Now",
+    company: "PT Bank Negara Indonesia (BNI)",
+    role: "Manager — iOS Dev, New Maverick Digital Delivery",
+    summary:
+      "Managing iOS development for New Maverick Digital Delivery, continuing Wondr by BNI through the version available on the App Store today.",
+    products: ["Wondr by BNI"],
+    current: true,
+  },
+  {
+    period: "2022 — 2024",
+    company: "Accenture",
+    role: "Business & Integration Arch Specialist / iOS Team Lead",
+    summary:
+      "Led iOS work on banking engagements — Livin’ by Mandiri across releases R3–R7, then Wondr by BNI from its initial proof-of-concept.",
+    products: ["Livin’ by Mandiri", "Wondr by BNI"],
+    current: false,
+  },
+  {
+    period: "2020 — 2022",
+    company: "Allianz Indonesia",
+    role: "iOS Engineer — Assistant Manager",
+    summary: "iOS engineering for insurance products.",
+    products: [],
+    current: false,
+  },
+  {
+    period: "2017 — 2020",
+    company: "Pegipegi · PHINCON · Krakatau IT",
+    role: "iOS Engineer / Developer",
+    summary:
+      "Early career across travel, telco, and IT services — including the MyTelkomsel refactor from React Native to its first fully native iOS release.",
+    products: ["MyTelkomsel"],
+    current: false,
+  },
 ];
 
 const capabilities: [string, string[]][] = [
@@ -166,9 +197,27 @@ export default function Home() {
       </section>
 
       <section className="experience shell" id="experience">
-        <div className="sectionHeading"><p>02 / Experience</p><h2>From implementation<br />to <em>direction.</em></h2></div>
+        <div className="sectionHeading">
+          <p>02 / Experience</p>
+          <h2>From implementation<br />to <em>direction.</em></h2>
+          <p className="sectionNote">
+            Seven-plus years across banking, insurance, telco, and travel — from hands-on feature work to leading iOS teams and owning delivery end to end.
+          </p>
+        </div>
         <div className="timeline">
-          {experience.map(([year, company, role]) => <div className="role" key={company}><span>{year}</span><h3>{company}</h3><p>{role}</p><i>↗</i></div>)}
+          {experience.map((job) => (
+            <div className={job.current ? "role roleCurrent" : "role"} key={job.company}>
+              <span>{job.period}</span>
+              <div>
+                <h3>{job.company}{job.current && <em className="nowBadge">Now</em>}</h3>
+                <p className="roleTitle">{job.role}</p>
+                <p className="roleSummary">{job.summary}</p>
+                {job.products.length > 0 && (
+                  <div className="roleProducts">{job.products.map((product) => <span key={product}>{product}</span>)}</div>
+                )}
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
