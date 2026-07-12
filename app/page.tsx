@@ -2,6 +2,7 @@ const projects = [
   {
     index: "01",
     title: "Wondr by BNI",
+    logo: "./logos/wondr-bni.png",
     type: "Greenfield digital banking",
     summary:
       "Built the iOS foundation from tender and proof-of-concept through architecture, security, CI/CD, release readiness, and production launch.",
@@ -10,6 +11,7 @@ const projects = [
   {
     index: "02",
     title: "Livin’ by Mandiri",
+    logo: "./logos/livin-mandiri.png",
     type: "Mobile banking at scale",
     summary:
       "Improved stability, analytics integration, iOS compatibility, feature delivery, and banking security for a high-scale mobile platform.",
@@ -18,10 +20,20 @@ const projects = [
   {
     index: "03",
     title: "MyTelkomsel",
+    logo: "./logos/mytelkomsel.jpg",
     type: "Native platform migration",
     summary:
       "Helped move the application from React Native to native iOS, strengthening platform performance and long-term maintainability.",
     tags: ["Native iOS", "Migration", "Performance", "Telco"],
+  },
+  {
+    index: "04",
+    title: "SingHealth PBT",
+    logo: "./logos/singhealth.png",
+    type: "Enterprise healthcare",
+    summary:
+      "Developed iOS capabilities for a SingHealth healthcare application, supporting reliable workflows, maintainable architecture, and secure enterprise delivery.",
+    tags: ["iOS", "Healthcare", "Enterprise", "Singapore"],
   },
 ];
 
@@ -94,7 +106,7 @@ export default function Home() {
           {projects.map((project) => (
             <article className="projectCard" key={project.title}>
               <div className="cardHeader"><span>{project.index}</span><i>↗</i></div>
-              <div className="projectMark"><span>{project.title.slice(0, 1)}</span><div className="signalLines"><i /><i /><i /></div></div>
+              <div className="projectMark"><img src={project.logo} alt={`${project.title} logo`} /><div className="signalLines"><i /><i /><i /></div></div>
               <p className="projectType">{project.type}</p><h3>{project.title}</h3><p>{project.summary}</p>
               <div className="tags">{project.tags.map((tag) => <span key={tag}>{tag}</span>)}</div>
             </article>
