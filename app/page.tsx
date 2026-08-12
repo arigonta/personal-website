@@ -95,6 +95,44 @@ const experience = [
   },
 ];
 
+const services = [
+  {
+    index: "01",
+    label: "Mobile",
+    title: "iOS & Android apps",
+    summary:
+      "Native mobile applications built from scratch or taken over mid-flight, with clean architecture, secure data handling, and a release process that holds up in production.",
+    items: ["Swift · SwiftUI · UIKit", "Android delivery", "App Store & Play Store release", "CI/CD and release governance"],
+  },
+  {
+    index: "02",
+    label: "Web",
+    title: "Websites & web apps",
+    summary:
+      "Company profiles, landing pages, and custom web applications that load fast, read well on every screen, and stay easy for your team to maintain.",
+    items: ["Next.js · React", "Responsive, accessible UI", "SEO and analytics setup", "Hosting and deployment"],
+  },
+  {
+    index: "03",
+    label: "Business systems",
+    title: "Web ERP & internal tools",
+    summary:
+      "Operational systems that replace spreadsheets and manual handoffs, built around how your business actually runs, with clear roles and reliable data.",
+    items: ["Inventory · Finance · HR · POS", "Role-based access control", "Reporting and dashboards", "API and third-party integration"],
+  },
+  {
+    index: "04",
+    label: "Advisory",
+    title: "Consulting & support",
+    summary:
+      "A senior pair of hands for teams that already have a product: architecture reviews, security and performance audits, pipeline automation, and ongoing maintenance.",
+    items: ["Architecture & code review", "App security audit", "CI/CD automation", "Maintenance retainer"],
+  },
+];
+
+const whatsappLink =
+  "https://wa.me/6281510822471?text=Hi%20Armadi%2C%20I%20would%20like%20to%20discuss%20a%20project.";
+
 const capabilities: [string, string[]][] = [
   ["Language & UI", ["Swift", "SwiftUI", "UIKit", "Combine", "Objective-C"]],
   ["Architecture & Quality", ["MVVM", "MVP", "VIPER", "App Security", "XCTest & XCUITest"]],
@@ -112,6 +150,7 @@ export default function Home() {
         <div className="navLinks">
           <a href="#work">Selected work</a>
           <a href="#experience">Experience</a>
+          <a href="#services">Services</a>
           <a href="#contact">Contact</a>
         </div>
         <a className="status" href="mailto:arigonta@gmail.com" aria-label="Email Armadi Gonta, available to connect">
@@ -122,6 +161,7 @@ export default function Home() {
           <div className="mobileLinks">
             <a href="#work">Selected work</a>
             <a href="#experience">Experience</a>
+            <a href="#services">Services</a>
             <a href="#contact">Contact</a>
           </div>
         </details>
@@ -233,14 +273,52 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="services shell" id="services">
+        <div className="sectionHeading">
+          <p>03 / Services</p>
+          <h2>Building products<br />for <em>your business.</em></h2>
+          <p className="sectionNote">
+            Alongside my full-time engineering work I take on selected freelance and contract projects: mobile apps, websites and web applications, and internal business systems, delivered with the same architecture, security, and release discipline I apply to enterprise banking products.
+          </p>
+        </div>
+        <div className="serviceGrid">
+          {services.map((service) => (
+            <article className="serviceCard" key={service.title}>
+              <div className="serviceTop"><span>{service.index}</span><i>{service.label}</i></div>
+              <h3>{service.title}</h3>
+              <p>{service.summary}</p>
+              <ul className="serviceList">
+                {service.items.map((item) => <li key={item}>{item}</li>)}
+              </ul>
+            </article>
+          ))}
+        </div>
+        <div className="serviceCta">
+          <div>
+            <h3>Have something<br />in mind? <em>Let’s talk.</em></h3>
+            <p className="serviceCtaNote">
+              Tell me what you are building and I will come back with the scope, a realistic timeline, and the approach I would take. WhatsApp is the fastest way to reach me.
+            </p>
+            <div className="serviceModes">
+              <span>Project based</span><span>Monthly retainer</span><span>Technical consultation</span>
+            </div>
+          </div>
+          <div className="serviceCtaActions">
+            <a className="primaryButton" href={whatsappLink} target="_blank" rel="noreferrer" data-goatcounter-click="whatsapp-services">Chat on WhatsApp <span>↗</span></a>
+            <a className="outlineButton" href="mailto:arigonta@gmail.com?subject=Project%20enquiry" data-goatcounter-click="email-services">Send a brief by email ↗</a>
+          </div>
+        </div>
+      </section>
+
       <footer id="contact">
         <div className="shell footerInner">
-          <p className="eyebrow"><span>Let’s connect</span> Open to senior iOS opportunities</p>
+          <p className="eyebrow"><span>Let’s connect</span> Open to senior iOS opportunities and freelance projects</p>
           <div className="footerGrid">
             <div>
               <h2>Let’s build your next<br /><em>iOS product.</em></h2>
               <div className="footerActions">
                 <a className="primaryButton" href="mailto:arigonta@gmail.com" data-goatcounter-click="email-footer">arigonta@gmail.com <span>↗</span></a>
+                <a className="outlineButton" href={whatsappLink} target="_blank" rel="noreferrer" data-goatcounter-click="whatsapp-footer">WhatsApp ↗</a>
                 <a className="outlineButton" href="./Armadi_Gonta_Resume.pdf" target="_blank" data-goatcounter-click="resume-footer">View résumé ↗</a>
                 <a className="outlineButton" href="https://linkedin.com/in/arigonta" target="_blank" rel="noreferrer">LinkedIn ↗</a>
                 <a className="outlineButton" href="https://github.com/arigonta" target="_blank" rel="noreferrer">GitHub ↗</a>
@@ -249,7 +327,7 @@ export default function Home() {
             <div className="footerFacts">
               <div><span>Location</span><p>Jakarta, Indonesia · GMT+7</p></div>
               <div><span>Currently</span><p>Manager, iOS Dev at PT Bank Negara Indonesia (BNI)</p></div>
-              <div><span>Open to</span><p>Senior iOS engineering roles and meaningful conversations</p></div>
+              <div><span>Open to</span><p>Senior iOS engineering roles, freelance product builds, and meaningful conversations</p></div>
             </div>
           </div>
           <div className="footerBottom"><span>© 2026 Armadi Gonta · Jakarta, Indonesia</span><a href="#top">Back to top ↑</a></div>

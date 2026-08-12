@@ -11,6 +11,15 @@ Public portfolio of **Armadi Gonta**, a Senior iOS Engineer based in Jakarta, In
 - **MyTelkomsel** · React Native refactor to the first fully native iOS release (v5.0)
 - **SingHealth EMOS v4** · Enterprise healthcare iPadOS app, delivered end to end
 
+## Services
+
+Available for freelance and contract work alongside full-time engineering:
+
+- **Mobile** · iOS and Android apps, from architecture to store release
+- **Web** · Websites and custom web applications
+- **Business systems** · Web ERP and internal tools
+- **Advisory** · Architecture reviews, security audits, CI/CD, maintenance
+
 ## Tech stack
 
 | Layer | Tools |
@@ -45,5 +54,6 @@ Every push to `main` deploys automatically through `.github/workflows/deploy-pag
 ## Contact
 
 - Email: arigonta@gmail.com
+- WhatsApp: https://wa.me/6281510822471
 - LinkedIn: https://linkedin.com/in/arigonta
 - GitHub: https://github.com/arigonta

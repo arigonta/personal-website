@@ -13,6 +13,7 @@ Keep the portfolio confident, precise, concise, and evidence-based. Do not inven
 - Location: Jakarta, Indonesia
 - Experience: 7+ years
 - Email: arigonta@gmail.com
+- WhatsApp: +62 815 1082 2471. Always link as `https://wa.me/6281510822471` (international format, no leading zero, no plus sign). The shared `whatsappLink` constant in `app/page.tsx` carries a URL-encoded prefilled message; reuse it instead of hardcoding new WhatsApp URLs.
 - LinkedIn: https://linkedin.com/in/arigonta
 - GitHub: https://github.com/arigonta
 - Public site: https://arigonta.github.io/personal-website/
@@ -87,12 +88,28 @@ Each timeline role shows a one-line title, a short factual summary, and product 
 
 Timeline rows are not links; do not add decorative arrows that imply clickability.
 
+## Services section copy
+
+Section "03 / Services" sits between Core capabilities and the contact footer. It advertises Armadi's freelance and contract availability without displacing the Senior iOS Engineer positioning, so keep it after the work, experience, and capability sections.
+
+- Heading: "Building products for your business."
+- Intro note: freelance and contract projects taken on alongside full-time engineering work, delivered with the same architecture, security, and release discipline as the enterprise products.
+- Four service cards, defined by the `services` array in `app/page.tsx`:
+  1. Mobile · "iOS & Android apps"
+  2. Web · "Websites & web apps"
+  3. Business systems · "Web ERP & internal tools"
+  4. Advisory · "Consulting & support"
+- CTA panel headline: "Have something in mind? Let's talk." Engagement chips: Project based, Monthly retainer, Technical consultation.
+- CTA buttons: WhatsApp (primary) and an email brief (outline). WhatsApp is presented as the fastest channel.
+- Do not publish rates, day rates, or fixed prices unless Armadi supplies them.
+- The Android and web/ERP offerings are service commitments Armadi chose to advertise. Do not move them into the resume, experience timeline, or Core capabilities, which stay iOS-focused and evidence-based.
+
 ## Footer copy
 
 - Headline: "Let's build your next iOS product."
-- Eyebrow: "Let's connect · Open to senior iOS opportunities."
-- Primary CTA is the email button (arigonta@gmail.com), followed by outline buttons for the resume PDF, LinkedIn, and GitHub.
-- Facts column: Location "Jakarta, Indonesia · GMT+7"; Currently "Manager, iOS Dev at PT Bank Negara Indonesia (BNI)"; Open to "Senior iOS engineering roles and meaningful conversations".
+- Eyebrow: "Let's connect · Open to senior iOS opportunities and freelance projects."
+- Primary CTA is the email button (arigonta@gmail.com), followed by outline buttons for WhatsApp, the resume PDF, LinkedIn, and GitHub.
+- Facts column: Location "Jakarta, Indonesia · GMT+7"; Currently "Manager, iOS Dev at PT Bank Negara Indonesia (BNI)"; Open to "Senior iOS engineering roles, freelance product builds, and meaningful conversations".
 - Keep the facts column aligned with the resume facts above when roles change.
 
 ## Content rules
@@ -105,7 +122,7 @@ Timeline rows are not links; do not add decorative arrows that imply clickabilit
 - Keep the resume download and contact links working.
 - Do not add confidential implementation details, internal endpoints, credentials, client data, or unreleased product information.
 - Never commit tokens, passwords, private keys, or GitHub credentials. If a credential appears in chat or terminal output, instruct the user to revoke it immediately.
-- `app/layout.tsx` embeds JSON-LD Person structured data and a GoatCounter analytics script (site code `arigonta`). Keep both when editing the layout.
+- `app/layout.tsx` embeds JSON-LD Person structured data and a GoatCounter analytics script (site code `arigonta`). Keep both when editing the layout. The Person schema also carries `telephone` and a `makesOffer` list mirroring the four services; keep it in sync with the Services section.
 
 ## Visual direction
 
