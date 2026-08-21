@@ -69,8 +69,8 @@ Verified via the iTunes Search API. Use these exact URLs when linking project ca
 
 ## Other resume facts
 
-- Current: PT Bank Negara Indonesia (BNI), Manager - iOS Dev, New Maverick Digital Delivery, September 2024 to present.
-- Accenture: Business & Integration Arch Specialist / iOS Team Lead, September 2022 to August 2024.
+- Current: PT Bank Negara Indonesia (BNI), Senior iOS Engineer / Sub Lead, New Maverick Digital Delivery, September 2024 to present. The internal job grade is "Manager, iOS Dev"; publish the Senior / Sub Lead framing instead.
+- Accenture: Business & Integration Arch Specialist / Senior iOS Developer, September 2022 to August 2024. Do not publish "iOS Team Lead" as the public role line.
 - Allianz Indonesia: iOS Engineer - Assistant Manager, June 2020 to August 2022.
 - Earlier experience includes Pegipegi, PHINCON, and PT Krakatau Information Technology.
 - Timeline note: Livin' by Mandiri (Sep 2022 – Jun 2023) and the Wondr by BNI proof-of-concept onward (from Jun 2023) were delivered during the Accenture tenure; Wondr development continues under the BNI role (Sep 2024 – present).
@@ -81,10 +81,10 @@ Verified via the iTunes Search API. Use these exact URLs when linking project ca
 
 Each timeline role shows a one-line title, a short factual summary, and product chips linking the role to Selected Work. Canonical summaries (keep aligned with the facts above; do not add impact numbers):
 
-- BNI: "Managing iOS development for New Maverick Digital Delivery, continuing Wondr by BNI through the version available on the App Store today." Chips: Wondr by BNI. This row is highlighted as the current role with a "Now" badge.
-- Accenture: "Led iOS work on banking engagements: Livin' by Mandiri across releases R3–R7, then Wondr by BNI from its initial proof-of-concept." Chips: Livin' by Mandiri, Wondr by BNI.
-- Allianz Indonesia: "iOS engineering for insurance products." No chips.
-- Pegipegi · PHINCON · Krakatau IT: "Early career across travel, telco, and IT services, including the MyTelkomsel refactor from React Native to its first fully native iOS release." Chips: MyTelkomsel.
+- BNI: "Leading iOS delivery inside New Maverick Digital Delivery and continuing Wondr by BNI through the version on the App Store today, covering architecture, app security, CI/CD, release readiness, and production support." Chips: Wondr by BNI. This row is highlighted as the current role with a "Now" badge.
+- Accenture: "Senior iOS engineer on banking engagements: Livin' by Mandiri across releases R3–R7, covering feature delivery, stability, analytics, and banking security requirements, then Wondr by BNI from its initial proof-of-concept into architecture, app security, and CI/CD foundations." Chips: Livin' by Mandiri, Wondr by BNI.
+- Allianz Indonesia: "In-house iOS engineering for Allianz insurance products, building and maintaining native features across the full development and release cycle." No chips.
+- Pegipegi · PHINCON · Krakatau IT: "Early career across travel, telco, and IT services, shipping native iOS features and contributing to the MyTelkomsel refactor from React Native to its first fully native iOS release, with a focus on native implementation, platform performance, and maintainability." Chips: MyTelkomsel.
 
 Timeline rows are not links; do not add decorative arrows that imply clickability.
 
@@ -109,7 +109,7 @@ Section "03 / Services" sits between Core capabilities and the contact footer. I
 - Headline: "Let's build your next iOS product."
 - Eyebrow: "Let's connect · Open to senior iOS opportunities and freelance projects."
 - Primary CTA is the email button (arigonta@gmail.com), followed by outline buttons for WhatsApp, the resume PDF, LinkedIn, and GitHub.
-- Facts column: Location "Jakarta, Indonesia · GMT+7"; Currently "Manager, iOS Dev at PT Bank Negara Indonesia (BNI)"; Open to "Senior iOS engineering roles, freelance product builds, and meaningful conversations".
+- Facts column: Location "Jakarta, Indonesia · GMT+7"; Currently "Senior iOS Engineer / Sub Lead at PT Bank Negara Indonesia (BNI)"; Open to "Senior iOS engineering roles, freelance product builds, and meaningful conversations".
 - Keep the facts column aligned with the resume facts above when roles change.
 
 ## Content rules

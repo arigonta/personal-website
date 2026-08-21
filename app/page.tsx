@@ -61,18 +61,18 @@ const experience = [
   {
     period: "2024 – Now",
     company: "PT Bank Negara Indonesia (BNI)",
-    role: "Manager, iOS Dev · New Maverick Digital Delivery",
+    role: "Senior iOS Engineer / Sub Lead · New Maverick Digital Delivery",
     summary:
-      "Managing iOS development for New Maverick Digital Delivery, continuing Wondr by BNI through the version available on the App Store today.",
+      "Leading iOS delivery inside New Maverick Digital Delivery and continuing Wondr by BNI through the version on the App Store today, covering architecture, app security, CI/CD, release readiness, and production support.",
     products: ["Wondr by BNI"],
     current: true,
   },
   {
     period: "2022 – 2024",
     company: "Accenture",
-    role: "Business & Integration Arch Specialist / iOS Team Lead",
+    role: "Business & Integration Arch Specialist / Senior iOS Developer",
     summary:
-      "Led iOS work on banking engagements: Livin’ by Mandiri across releases R3–R7, then Wondr by BNI from its initial proof-of-concept.",
+      "Senior iOS engineer on banking engagements: Livin’ by Mandiri across releases R3–R7, covering feature delivery, stability, analytics, and banking security requirements, then Wondr by BNI from its initial proof-of-concept into architecture, app security, and CI/CD foundations.",
     products: ["Livin’ by Mandiri", "Wondr by BNI"],
     current: false,
   },
@@ -80,7 +80,8 @@ const experience = [
     period: "2020 – 2022",
     company: "Allianz Indonesia",
     role: "iOS Engineer · Assistant Manager",
-    summary: "iOS engineering for insurance products.",
+    summary:
+      "In-house iOS engineering for Allianz insurance products, building and maintaining native features across the full development and release cycle.",
     products: [],
     current: false,
   },
@@ -89,7 +90,7 @@ const experience = [
     company: "Pegipegi · PHINCON · Krakatau IT",
     role: "iOS Engineer / Developer",
     summary:
-      "Early career across travel, telco, and IT services, including the MyTelkomsel refactor from React Native to its first fully native iOS release.",
+      "Early career across travel, telco, and IT services, shipping native iOS features and contributing to the MyTelkomsel refactor from React Native to its first fully native iOS release, with a focus on native implementation, platform performance, and maintainability.",
     products: ["MyTelkomsel"],
     current: false,
   },
@@ -326,7 +327,7 @@ export default function Home() {
             </div>
             <div className="footerFacts">
               <div><span>Location</span><p>Jakarta, Indonesia · GMT+7</p></div>
-              <div><span>Currently</span><p>Manager, iOS Dev at PT Bank Negara Indonesia (BNI)</p></div>
+              <div><span>Currently</span><p>Senior iOS Engineer / Sub Lead at PT Bank Negara Indonesia (BNI)</p></div>
               <div><span>Open to</span><p>Senior iOS engineering roles, freelance product builds, and meaningful conversations</p></div>
             </div>
           </div>
