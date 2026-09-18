@@ -18,6 +18,23 @@ const projects = [
   },
   {
     index: "02",
+    title: "SingHealth EMOS v4",
+    logo: "./logos/singhealth.png",
+    logoWidth: 320,
+    logoHeight: 355,
+    mark: "markPill",
+    badge: "Enterprise",
+    link: null,
+    type: "Enterprise healthcare · iPadOS",
+    period: "Nov 2024 – Present",
+    start: "2024-11",
+    role: "Sole iPadOS Engineer · End-to-end delivery",
+    summary:
+      "Independently built the EMOS v4 iPad application end to end, owning the iPadOS architecture, implementation, integration, quality, and release readiness for enterprise healthcare workflows.",
+    tags: ["iPadOS", "Swift", "Healthcare", "End-to-end"],
+  },
+  {
+    index: "03",
     title: "Livin’ by Mandiri",
     logo: "./logos/livin-mandiri.png",
     logoWidth: 700,
@@ -34,7 +51,7 @@ const projects = [
     tags: ["Swift", "Analytics", "Performance", "Fintech"],
   },
   {
-    index: "03",
+    index: "04",
     title: "MyTelkomsel",
     logo: "./logos/mytelkomsel.png",
     logoWidth: 288,
@@ -49,23 +66,6 @@ const projects = [
     summary:
       "Joined the refactor initiative that moved MyTelkomsel from React Native to its first fully native iOS release, version 5.0, contributing to implementation, feature delivery, platform performance, and maintainability.",
     tags: ["Native iOS", "Migration", "Performance", "Telco"],
-  },
-  {
-    index: "04",
-    title: "SingHealth EMOS v4",
-    logo: "./logos/singhealth.png",
-    logoWidth: 320,
-    logoHeight: 355,
-    mark: "markPill",
-    badge: "Enterprise",
-    link: null,
-    type: "Enterprise healthcare · iPadOS",
-    period: "Nov 2024 – Present",
-    start: "2024-11",
-    role: "Sole iPadOS Engineer · End-to-end delivery",
-    summary:
-      "Independently built the EMOS v4 iPad application end to end, owning the iPadOS architecture, implementation, integration, quality, and release readiness for enterprise healthcare workflows.",
-    tags: ["iPadOS", "Swift", "Healthcare", "End-to-end"],
   },
   {
     index: "05",
@@ -194,6 +194,10 @@ const services = [
   },
 ];
 
+const FEATURED_COUNT = 2;
+
+const shipped = projects.filter((project) => project.logo && project.badge !== "In development");
+
 const whatsappLink =
   "https://wa.me/6281510822471?text=Hi%20Armadi%2C%20I%20would%20like%20to%20discuss%20a%20project.";
 
@@ -245,23 +249,33 @@ export default function Home() {
             "links.forEach(function(a){a.removeAttribute('aria-current')});" +
             "if(current)map[current].forEach(function(a){a.setAttribute('aria-current','true')})},{rootMargin:'-45% 0px -45% 0px'});" +
             "ids.forEach(function(id){io.observe(document.getElementById(id))})}" +
-            "if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',navSpy)}else{navSpy()}",
+            // Reveal on scroll, but never hide content from anyone who cannot run this
+            // or has asked for less motion: the class is only added by script.
+            "function reveal(){if(matchMedia('(prefers-reduced-motion:reduce)').matches||!window.IntersectionObserver)return;" +
+            "var els=[].slice.call(document.querySelectorAll('.sectionHeading,.projectCard,.role,.capabilityGroup,.serviceCard,.serviceCta,.shippedStrip,.footerGrid'));" +
+            "els.forEach(function(el){el.classList.add('reveal')});" +
+            "var ro=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('isIn');ro.unobserve(e.target)}})},{rootMargin:'0px 0px -12% 0px',threshold:.08});" +
+            "els.forEach(function(el){ro.observe(el)})}" +
+            "function boot(){navSpy();reveal()}" +
+            "if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',boot)}else{boot()}",
         }}
       />
 
       <section className="hero shell" id="top">
-        <div className="heroCopy">
-          <p className="eyebrow"><span>Senior iOS Engineer</span> Jakarta, Indonesia</p>
-          <h1>Mobile systems<br />that <em>scale.</em></h1>
-          <p className="intro">
-            I’m Armadi Gonta, a Senior iOS Engineer with 7+ years building secure, high-scale products across digital banking, insurance, healthcare, telco, and travel.
-          </p>
-          <p className="intro introSecondary">
-            Most recently I helped build Wondr by BNI from proof-of-concept to its current App Store release, and independently delivered the SingHealth EMOS v4 iPadOS app, with a focus on architecture, app security, and release readiness.
-          </p>
-          <div className="heroActions">
-            <a className="primaryButton" href="#work">Explore selected work <span>↘</span></a>
-            <a className="textLink" href="./Armadi_Gonta_Resume.pdf" target="_blank" data-goatcounter-click="resume-hero">View résumé ↗</a>
+        <p className="eyebrow"><span>Senior iOS Engineer</span> Jakarta, Indonesia</p>
+        <h1>Mobile systems<br />that <em>scale.</em></h1>
+        <div className="heroLower">
+          <div className="heroCopy">
+            <p className="intro">
+              I’m Armadi Gonta, a Senior iOS Engineer with 7+ years building secure, high-scale products across digital banking, insurance, healthcare, telco, and travel.
+            </p>
+            <p className="intro introSecondary">
+              Most recently I helped build Wondr by BNI from proof-of-concept to its current App Store release, and independently delivered the SingHealth EMOS v4 iPadOS app, with a focus on architecture, app security, and release readiness.
+            </p>
+            <div className="heroActions">
+              <a className="primaryButton" href="#work">Explore selected work <span>↘</span></a>
+              <a className="textLink" href="./Armadi_Gonta_Resume.pdf" target="_blank" data-goatcounter-click="resume-hero">View résumé ↗</a>
+            </div>
           </div>
           <div className="metrics" aria-label="Career highlights">
             <div><strong>7+</strong><span>Years delivering<br />mobile products</span></div>
@@ -269,26 +283,21 @@ export default function Home() {
             <div><strong>6</strong><span>Products shipped<br />to production</span></div>
           </div>
         </div>
+      </section>
 
-        <div className="systemVisual" aria-label="Abstract mobile architecture illustration">
-          <div className="orbit orbitOne" /><div className="orbit orbitTwo" />
-          <div className="codeLabel labelOne">ARCH / MVVM</div>
-          <div className="codeLabel labelTwo">RELEASE / READY</div>
-          <div className="phone">
-            <div className="phoneTop"><span>9:41</span><b>•••</b></div>
-            <div className="phoneBody">
-              <p>Good morning,</p><h3>Build with clarity.</h3>
-              <div className="balance"><span>System health</span><strong>99.9%</strong><i /></div>
-              <div className="quickGrid">
-                <div><b>↗</b><span>Secure</span></div><div><b>⌁</b><span>Modular</span></div><div><b>✓</b><span>Tested</span></div>
-              </div>
-              <div className="chart"><i /><i /><i /><i /><i /><i /><i /></div>
-              <div className="activity"><span /><div><b>Production ready</b><small>Release governance</small></div><em>LIVE</em></div>
-            </div>
-          </div>
-          <div className="floatingCard cardTop"><span>CI/CD</span><strong>Automated</strong><i /></div>
-          <div className="floatingCard cardBottom"><span>SECURITY</span><strong>Built in</strong><i /></div>
-        </div>
+      <section className="shipped shell" aria-labelledby="shippedHeading">
+        <p className="shippedLabel" id="shippedHeading">Shipped to production</p>
+        <ul className="shippedStrip">
+          {shipped.map((item) => (
+            <li key={item.title}>
+              {item.link ? (
+                <a href={item.link} target="_blank" rel="noreferrer" data-goatcounter-click={`shipped-${item.title.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`}>{item.title} <i>↗</i></a>
+              ) : (
+                <span>{item.title}</span>
+              )}
+            </li>
+          ))}
+        </ul>
       </section>
 
       <section className="workSection shell" id="work">
@@ -332,9 +341,17 @@ export default function Home() {
                 <div className="tags">{project.tags.map((tag) => <span key={tag}>{tag}</span>)}</div>
               </>
             );
-            // An odd project count leaves the last card alone on its own row,
-            // so it spans the full grid width instead of sitting half empty.
-            const cardClass = index === projects.length - 1 && projects.length % 2 === 1 ? "projectCard projectCardWide" : "projectCard";
+            // The first two are the work Armadi owned end to end, so they lead the
+            // grid at full width. An odd tail count would otherwise leave the last
+            // card stranded beside an empty cell, so it spans the row instead.
+            const featured = index < FEATURED_COUNT;
+            const isLast = index === projects.length - 1;
+            const tailIsOdd = (projects.length - FEATURED_COUNT) % 2 === 1;
+            const cardClass = [
+              "projectCard",
+              featured ? "projectCardFeatured" : "",
+              !featured && isLast && tailIsOdd ? "projectCardWide" : "",
+            ].filter(Boolean).join(" ");
             return project.link ? (
               <a className={cardClass} key={project.title} href={project.link} target="_blank" rel="noreferrer" aria-label={`${project.title} on the App Store`} data-goatcounter-click={`appstore-${project.title.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`}>{card}</a>
             ) : (
