@@ -5,6 +5,8 @@ const projects = [
     logo: "./logos/wondr-bni.png",
     logoWidth: 960,
     logoHeight: 336,
+    mark: "markDefault",
+    badge: "App Store ↗",
     link: "https://apps.apple.com/id/app/wondr-by-bni/id6499518320",
     type: "Greenfield digital banking",
     period: "Jun 2023 – Present",
@@ -19,6 +21,8 @@ const projects = [
     logo: "./logos/livin-mandiri.png",
     logoWidth: 700,
     logoHeight: 495,
+    mark: "markPill",
+    badge: "App Store ↗",
     link: "https://apps.apple.com/id/app/livin-by-mandiri/id1555414743",
     type: "Mobile banking at scale",
     period: "Sep 2022 – Jun 2023",
@@ -33,9 +37,11 @@ const projects = [
     logo: "./logos/mytelkomsel.png",
     logoWidth: 288,
     logoHeight: 288,
+    mark: "markIcon",
+    badge: "App Store ↗",
     link: "https://apps.apple.com/id/app/mytelkomsel/id651412430",
     type: "Native platform migration",
-    period: "Apr 2019 – Nov 2019",
+    period: "Apr 2019 – Oct 2019",
     role: "iOS Engineer · React Native refactor to native iOS 5.0",
     summary:
       "Joined the refactor initiative that moved MyTelkomsel from React Native to its first fully native iOS release, version 5.0, contributing to implementation, feature delivery, platform performance, and maintainability.",
@@ -47,6 +53,8 @@ const projects = [
     logo: "./logos/singhealth.png",
     logoWidth: 320,
     logoHeight: 355,
+    mark: "markTall",
+    badge: "Enterprise",
     link: null,
     type: "Enterprise healthcare · iPadOS",
     period: "Nov 2024 – Present",
@@ -54,6 +62,54 @@ const projects = [
     summary:
       "Independently built the EMOS v4 iPad application end to end, owning the iPadOS architecture, implementation, integration, quality, and release readiness for enterprise healthcare workflows.",
     tags: ["iPadOS", "Swift", "Healthcare", "End-to-end"],
+  },
+  {
+    index: "05",
+    title: "Pegipegi",
+    logo: "./logos/pegipegi.png",
+    logoWidth: 2098,
+    logoHeight: 419,
+    mark: "markWide",
+    badge: "Archived",
+    link: null,
+    type: "Online travel · Consumer app",
+    period: "Nov 2019 – Apr 2020",
+    role: "iOS Engineer · Contributed across v2.9 – v3.4",
+    summary:
+      "Joined the established Pegipegi travel booking app and contributed to the iOS releases from version 2.9 through 3.4, working on feature delivery and maintenance inside the existing codebase. The service has since ceased operations and the app is no longer listed.",
+    tags: ["Swift", "Objective-C", "Travel", "Feature delivery"],
+  },
+  {
+    index: "06",
+    title: "Allianz Inspire",
+    logo: "./logos/allianz.svg",
+    logoWidth: 300,
+    logoHeight: 134,
+    mark: "markBlock",
+    badge: "Internal",
+    link: null,
+    type: "Bancassurance sales tool",
+    period: "Jun 2020 – Aug 2022",
+    role: "iOS Engineer · Contributed to Inspire v2.4",
+    summary:
+      "In-house iOS engineering on Inspire, the Allianz Indonesia bancassurance sales application used by bank partner channels, contributing native features and maintenance through the version 2.4 release cycle.",
+    tags: ["Swift", "Insurance", "Native iOS", "In-house"],
+  },
+  {
+    index: "07",
+    title: "Restaurant POS",
+    logo: null,
+    logoWidth: 0,
+    logoHeight: 0,
+    mark: "markGlyph",
+    badge: "In development",
+    link: null,
+    type: "Point of sale · iPadOS",
+    period: "Sep 2026 – Present",
+    role: "Sole iPadOS Engineer · End-to-end delivery, in progress",
+    summary:
+      "Building a point of sale iPad application for a restaurant client, owning the iPadOS delivery end to end from architecture through release readiness. The project is in active development, so the client and product details stay private until launch.",
+    tags: ["iPadOS", "Swift", "Point of sale", "In progress"],
   },
 ];
 
@@ -81,8 +137,8 @@ const experience = [
     company: "Allianz Indonesia",
     role: "iOS Engineer · Assistant Manager",
     summary:
-      "In-house iOS engineering for Allianz insurance products, building and maintaining native features across the full development and release cycle.",
-    products: [],
+      "In-house iOS engineering for Allianz insurance products, including Inspire, the bancassurance sales application for bank partner channels, building and maintaining native features across the full development and release cycle.",
+    products: ["Allianz Inspire"],
     current: false,
   },
   {
@@ -90,8 +146,8 @@ const experience = [
     company: "Pegipegi · PHINCON · Krakatau IT",
     role: "iOS Engineer / Developer",
     summary:
-      "Early career across travel, telco, and IT services, shipping native iOS features and contributing to the MyTelkomsel refactor from React Native to its first fully native iOS release, with a focus on native implementation, platform performance, and maintainability.",
-    products: ["MyTelkomsel"],
+      "Early career across travel, telco, and IT services: contributing to the MyTelkomsel refactor from React Native to its first fully native iOS release, then to the Pegipegi travel app across versions 2.9 through 3.4, with a focus on native implementation, platform performance, and maintainability.",
+    products: ["MyTelkomsel", "Pegipegi"],
     current: false,
   },
 ];
@@ -191,7 +247,7 @@ export default function Home() {
           <div className="metrics" aria-label="Career highlights">
             <div><strong>7+</strong><span>Years delivering<br />mobile products</span></div>
             <div><strong>5</strong><span>Enterprise<br />product domains</span></div>
-            <div><strong>4</strong><span>Flagship apps<br />banking · telco · health</span></div>
+            <div><strong>6</strong><span>Products shipped<br />banking · insurance · telco</span></div>
           </div>
         </div>
 
@@ -217,13 +273,42 @@ export default function Home() {
       </section>
 
       <section className="workSection shell" id="work">
-        <div className="sectionHeading"><p>01 / Selected work</p><h2>Products built for<br /><em>real-world scale.</em></h2></div>
+        <div className="sectionHeading">
+          <p>01 / Selected work</p>
+          <h2>Built from scratch,<br />or <em>joined mid-flight.</em></h2>
+          <p className="sectionNote">
+            Some of these products were built from the ground up. Others were established apps joined mid-development, with contributions scoped to specific releases and versions. Each card states the exact role and scope.
+          </p>
+        </div>
         <div className="projectGrid">
           {projects.map((project) => {
             const card = (
               <>
-                <div className="cardHeader"><span>{project.index}</span><i>{project.link ? "App Store ↗" : "Enterprise"}</i></div>
-                <div className="projectMark"><img src={project.logo} alt={`${project.title} logo`} width={project.logoWidth} height={project.logoHeight} loading="lazy" decoding="async" /><div className="signalLines"><i /><i /><i /></div></div>
+                <div className="cardHeader"><span>{project.index}</span><i>{project.badge}</i></div>
+                <div className="projectMark">
+                  {project.logo ? (
+                    <img className={project.mark} src={project.logo} alt={`${project.title} logo`} width={project.logoWidth} height={project.logoHeight} loading="lazy" decoding="async" />
+                  ) : (
+                    <svg className={project.mark} viewBox="0 0 132 96" role="img" aria-label="Abstract point of sale tablet illustration">
+                      <rect x="2" y="2" width="128" height="92" rx="11" fill="#0d1420" stroke="#2b3a52" strokeWidth="1.5" />
+                      <rect x="10" y="10" width="68" height="76" rx="5" fill="#111a2a" />
+                      <rect x="16" y="16" width="27" height="20" rx="3" fill="#1d2a42" />
+                      <rect x="47" y="16" width="27" height="20" rx="3" fill="#1d2a42" />
+                      <rect x="16" y="40" width="27" height="20" rx="3" fill="#2764ff" opacity="0.55" />
+                      <rect x="47" y="40" width="27" height="20" rx="3" fill="#1d2a42" />
+                      <rect x="16" y="64" width="27" height="16" rx="3" fill="#1d2a42" />
+                      <rect x="47" y="64" width="27" height="16" rx="3" fill="#1d2a42" />
+                      <rect x="84" y="10" width="38" height="76" rx="5" fill="#111a2a" />
+                      <rect x="90" y="18" width="26" height="3" rx="1.5" fill="#33445e" />
+                      <rect x="90" y="27" width="20" height="3" rx="1.5" fill="#33445e" />
+                      <rect x="90" y="36" width="24" height="3" rx="1.5" fill="#33445e" />
+                      <rect x="90" y="45" width="16" height="3" rx="1.5" fill="#33445e" />
+                      <rect x="90" y="56" width="26" height="1" fill="#2b3a52" />
+                      <rect x="90" y="62" width="26" height="14" rx="3" fill="#43d9ff" opacity="0.85" />
+                    </svg>
+                  )}
+                  <div className="signalLines"><i /><i /><i /></div>
+                </div>
                 <div className="projectMeta"><p className="projectType">{project.type}</p><time>{project.period}</time></div><h3>{project.title}</h3><p className="projectRole"><span>Role</span>{project.role}</p><p>{project.summary}</p>
                 <div className="tags">{project.tags.map((tag) => <span key={tag}>{tag}</span>)}</div>
               </>
