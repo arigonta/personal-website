@@ -57,6 +57,7 @@ Use these facts as the source of truth. Preserve the distinctions between joinin
 - Armadi independently built the iPad application.
 - Contributions include iPadOS architecture, implementation, integration, quality, and release readiness for enterprise healthcare workflows.
 - Prefer "iPadOS" over "iPad iOS" in polished copy.
+- The SingHealth wordmark is near-black on transparent, so its card uses `markPill` (white pill) to stay legible on the dark card.
 
 ### Pegipegi
 
@@ -150,7 +151,9 @@ Section "03 / Services" sits between Core capabilities and the contact footer. I
 
 ## Hero metrics
 
-The hero metric strip reads "7+ years delivering mobile products", "5 enterprise product domains", and "6 products shipped · banking · insurance · telco". The "products shipped" count covers released products only, so the in-development Restaurant POS project is excluded. Update the count when a project actually ships.
+The hero metric strip reads "7+ years delivering mobile products", "5 enterprise product domains", and "6 products shipped to production". The "products shipped" count covers released products only, so the in-development Restaurant POS project is excluded. Update the count when a project actually ships.
+
+The five domains are banking, insurance, healthcare, telco, and travel. They are named once, in the hero intro paragraph, and the metric strip stays numeric so the two never drift apart. Do not list a partial subset of the domains anywhere.
 
 ## Content rules
 
@@ -163,6 +166,7 @@ The hero metric strip reads "7+ years delivering mobile products", "5 enterprise
 - Do not add confidential implementation details, internal endpoints, credentials, client data, or unreleased product information.
 - Never commit tokens, passwords, private keys, or GitHub credentials. If a credential appears in chat or terminal output, instruct the user to revoke it immediately.
 - `app/layout.tsx` embeds JSON-LD Person structured data and a GoatCounter analytics script (site code `arigonta`). Keep both when editing the layout. The Person schema also carries `telephone` and a `makesOffer` list mirroring the four services; keep it in sync with the Services section.
+- `metadataBase` already carries the `/personal-website/` base path. Asset paths inside `metadata` must therefore be written relative to it (`/og.jpg`, not `/personal-website/og.jpg`), otherwise Next appends the base path twice and the resulting URL 404s. This previously broke the Open Graph image, so after changing metadata, check the generated `out/index.html` and confirm the `og:image` URL resolves.
 
 ## Visual direction
 
@@ -173,6 +177,9 @@ The hero metric strip reads "7+ years delivering mobile products", "5 enterprise
 - Project cards use official product logos stored in `public/logos/`. Each entry in the `projects` array carries a `mark` class (`markDefault`, `markPill`, `markIcon`, `markTall`, `markWide`, `markBlock`) that controls logo sizing and background in `app/globals.css`. Do not reintroduce positional `:nth-child` logo rules, which break whenever a project is added or reordered.
 - Logos that are dark on transparent (Livin', Pegipegi) sit on a white pill so they stay legible on the dark card. The Allianz mark ships with its own blue block and needs no pill.
 - `pegipegi.png` and `allianz.svg` were sourced from Wikimedia Commons, because neither app has a live App Store listing to pull artwork from.
+- The primary navigation sits in a full-bleed sticky bar (`.navBar`) so it stays reachable down a long page. A small inline IntersectionObserver in `app/page.tsx` sets `aria-current` on the nav link for the section in view. Anchor offsets are handled with `scroll-padding-top`, so keep it in sync if the bar height changes.
+- Text below roughly 9px is reserved for the decorative phone mock. Real copy, labels, chips, and dates stay at 9px or larger and at or above a 4.5:1 contrast ratio on their background.
+- Selected Work is a two column grid. When the project count is odd the last card gets `projectCardWide` and spans the full row, so no card is left stranded beside an empty cell.
 - Preserve responsive behavior and `prefers-reduced-motion` support.
 - Do not replace official logos with generated approximations.
 

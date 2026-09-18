@@ -10,6 +10,7 @@ const projects = [
     link: "https://apps.apple.com/id/app/wondr-by-bni/id6499518320",
     type: "Greenfield digital banking",
     period: "Jun 2023 – Present",
+    start: "2023-06",
     role: "Senior iOS Engineer · From inception to current App Store release",
     summary:
       "Helped build the iOS application from scratch and continue developing it through the version available on the App Store today, spanning proof-of-concept, architecture, security, CI/CD, feature delivery, launch, and ongoing production evolution.",
@@ -26,6 +27,7 @@ const projects = [
     link: "https://apps.apple.com/id/app/livin-by-mandiri/id1555414743",
     type: "Mobile banking at scale",
     period: "Sep 2022 – Jun 2023",
+    start: "2022-09",
     role: "Senior iOS Engineer · Releases R3–R7",
     summary:
       "Joined the established Livin’ by Mandiri product during releases R3 through R7, contributing to feature development, stability, analytics integration, iOS compatibility, and banking security across the existing codebase.",
@@ -42,6 +44,7 @@ const projects = [
     link: "https://apps.apple.com/id/app/mytelkomsel/id651412430",
     type: "Native platform migration",
     period: "Apr 2019 – Oct 2019",
+    start: "2019-04",
     role: "iOS Engineer · React Native refactor to native iOS 5.0",
     summary:
       "Joined the refactor initiative that moved MyTelkomsel from React Native to its first fully native iOS release, version 5.0, contributing to implementation, feature delivery, platform performance, and maintainability.",
@@ -53,11 +56,12 @@ const projects = [
     logo: "./logos/singhealth.png",
     logoWidth: 320,
     logoHeight: 355,
-    mark: "markTall",
+    mark: "markPill",
     badge: "Enterprise",
     link: null,
     type: "Enterprise healthcare · iPadOS",
     period: "Nov 2024 – Present",
+    start: "2024-11",
     role: "Sole iPadOS Engineer · End-to-end delivery",
     summary:
       "Independently built the EMOS v4 iPad application end to end, owning the iPadOS architecture, implementation, integration, quality, and release readiness for enterprise healthcare workflows.",
@@ -74,6 +78,7 @@ const projects = [
     link: null,
     type: "Online travel · Consumer app",
     period: "Nov 2019 – Apr 2020",
+    start: "2019-11",
     role: "iOS Engineer · Contributed across v2.9 – v3.4",
     summary:
       "Joined the established Pegipegi travel booking app and contributed to the iOS releases from version 2.9 through 3.4, working on feature delivery and maintenance inside the existing codebase. The service has since ceased operations and the app is no longer listed.",
@@ -90,6 +95,7 @@ const projects = [
     link: null,
     type: "Bancassurance sales tool",
     period: "Jun 2020 – Aug 2022",
+    start: "2020-06",
     role: "iOS Engineer · Contributed to Inspire v2.4",
     summary:
       "In-house iOS engineering on Inspire, the Allianz Indonesia bancassurance sales application used by bank partner channels, contributing native features and maintenance through the version 2.4 release cycle.",
@@ -106,6 +112,7 @@ const projects = [
     link: null,
     type: "Point of sale · iPadOS",
     period: "Sep 2026 – Present",
+    start: "2026-09",
     role: "Sole iPadOS Engineer · End-to-end delivery, in progress",
     summary:
       "Building a point of sale iPad application for a restaurant client, owning the iPadOS delivery end to end from architecture through release readiness. The project is in active development, so the client and product details stay private until launch.",
@@ -200,6 +207,7 @@ export default function Home() {
   return (
     <main>
       <a className="skipLink" href="#work">Skip to content</a>
+      <div className="navBar">
       <nav className="nav shell" aria-label="Primary navigation">
         <a className="brand" href="#top" aria-label="Armadi Gonta home">
           Armadi Gonta<span>.</span>
@@ -211,7 +219,7 @@ export default function Home() {
           <a href="#contact">Contact</a>
         </div>
         <a className="status" href="mailto:arigonta@gmail.com" aria-label="Email Armadi Gonta, available to connect">
-          <i /> Available to connect
+          <i /> <span className="statusFull">Available to connect</span><span className="statusShort">Available</span>
         </a>
         <details className="mobileMenu">
           <summary aria-label="Open navigation menu">Menu</summary>
@@ -223,10 +231,21 @@ export default function Home() {
           </div>
         </details>
       </nav>
+      </div>
       <script
         dangerouslySetInnerHTML={{
           __html:
-            "document.addEventListener('click',function(e){var a=e.target.closest('.mobileLinks a');if(a)a.closest('details').removeAttribute('open')});",
+            "document.addEventListener('click',function(e){var a=e.target.closest('.mobileLinks a');if(a)a.closest('details').removeAttribute('open')});" +
+            // The sections this observes are parsed after this script, so setup waits for the full document.
+            "function navSpy(){var links=[].slice.call(document.querySelectorAll('.navLinks a,.mobileLinks a')),ids=[],map={};" +
+            "links.forEach(function(a){var id=(a.getAttribute('href')||'').replace('#','');if(!id||!document.getElementById(id))return;if(!map[id]){map[id]=[];ids.push(id)}map[id].push(a)});" +
+            "if(!ids.length||!window.IntersectionObserver)return;var active={};" +
+            "var io=new IntersectionObserver(function(es){es.forEach(function(e){active[e.target.id]=e.isIntersecting});" +
+            "var current=null;ids.forEach(function(id){if(active[id])current=id});" +
+            "links.forEach(function(a){a.removeAttribute('aria-current')});" +
+            "if(current)map[current].forEach(function(a){a.setAttribute('aria-current','true')})},{rootMargin:'-45% 0px -45% 0px'});" +
+            "ids.forEach(function(id){io.observe(document.getElementById(id))})}" +
+            "if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',navSpy)}else{navSpy()}",
         }}
       />
 
@@ -235,7 +254,7 @@ export default function Home() {
           <p className="eyebrow"><span>Senior iOS Engineer</span> Jakarta, Indonesia</p>
           <h1>Mobile systems<br />that <em>scale.</em></h1>
           <p className="intro">
-            I’m Armadi Gonta, a Senior iOS Engineer with 7+ years building secure, high-scale products across digital banking, fintech, insurance, telco, and travel.
+            I’m Armadi Gonta, a Senior iOS Engineer with 7+ years building secure, high-scale products across digital banking, insurance, healthcare, telco, and travel.
           </p>
           <p className="intro introSecondary">
             Most recently I helped build Wondr by BNI from proof-of-concept to its current App Store release, and independently delivered the SingHealth EMOS v4 iPadOS app, with a focus on architecture, app security, and release readiness.
@@ -247,7 +266,7 @@ export default function Home() {
           <div className="metrics" aria-label="Career highlights">
             <div><strong>7+</strong><span>Years delivering<br />mobile products</span></div>
             <div><strong>5</strong><span>Enterprise<br />product domains</span></div>
-            <div><strong>6</strong><span>Products shipped<br />banking · insurance · telco</span></div>
+            <div><strong>6</strong><span>Products shipped<br />to production</span></div>
           </div>
         </div>
 
@@ -281,7 +300,7 @@ export default function Home() {
           </p>
         </div>
         <div className="projectGrid">
-          {projects.map((project) => {
+          {projects.map((project, index) => {
             const card = (
               <>
                 <div className="cardHeader"><span>{project.index}</span><i>{project.badge}</i></div>
@@ -309,14 +328,17 @@ export default function Home() {
                   )}
                   <div className="signalLines"><i /><i /><i /></div>
                 </div>
-                <div className="projectMeta"><p className="projectType">{project.type}</p><time>{project.period}</time></div><h3>{project.title}</h3><p className="projectRole"><span>Role</span>{project.role}</p><p>{project.summary}</p>
+                <div className="projectMeta"><p className="projectType">{project.type}</p><time dateTime={project.start}>{project.period}</time></div><h3>{project.title}</h3><p className="projectRole"><span>Role</span>{project.role}</p><p>{project.summary}</p>
                 <div className="tags">{project.tags.map((tag) => <span key={tag}>{tag}</span>)}</div>
               </>
             );
+            // An odd project count leaves the last card alone on its own row,
+            // so it spans the full grid width instead of sitting half empty.
+            const cardClass = index === projects.length - 1 && projects.length % 2 === 1 ? "projectCard projectCardWide" : "projectCard";
             return project.link ? (
-              <a className="projectCard" key={project.title} href={project.link} target="_blank" rel="noreferrer" aria-label={`${project.title} on the App Store`} data-goatcounter-click={`appstore-${project.title.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`}>{card}</a>
+              <a className={cardClass} key={project.title} href={project.link} target="_blank" rel="noreferrer" aria-label={`${project.title} on the App Store`} data-goatcounter-click={`appstore-${project.title.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`}>{card}</a>
             ) : (
-              <article className="projectCard" key={project.title}>{card}</article>
+              <article className={cardClass} key={project.title}>{card}</article>
             );
           })}
         </div>
@@ -347,8 +369,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="capabilities shell">
-        <p className="eyebrow"><span>Core capabilities</span> Systems thinking, end to end</p>
+      <section className="capabilities shell" id="capabilities" aria-labelledby="capabilitiesHeading">
+        <p className="eyebrow" id="capabilitiesHeading"><span>Core capabilities</span> Systems thinking, end to end</p>
         <div className="capabilityGroups">
           {capabilities.map(([group, items]) => (
             <div className="capabilityGroup" key={group}>

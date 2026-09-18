@@ -1,17 +1,42 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
 const geist = Geist({ variable: "--font-sans", subsets: ["latin"] });
 const mono = Geist_Mono({ variable: "--font-mono", subsets: ["latin"] });
 
+// metadataBase already carries the /personal-website/ base path, so asset paths
+// here stay relative to it. A leading "/personal-website/..." would be appended
+// to the base path and produce a doubled, 404-ing URL.
+const siteUrl = "https://arigonta.github.io/personal-website/";
+const ogImage = {
+  url: "/og.jpg",
+  width: 1200,
+  height: 630,
+  alt: "Armadi Gonta, Senior iOS Engineer, Jakarta, Indonesia",
+};
+
+export const viewport: Viewport = {
+  themeColor: "#05070a",
+  colorScheme: "dark",
+};
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://arigonta.github.io/personal-website/"),
+  metadataBase: new URL(siteUrl),
   title: "Armadi Gonta · Senior iOS Engineer",
   description: "Portfolio of Armadi Gonta, a Senior iOS Engineer building secure mobile systems at scale. Available for freelance mobile app, website, and web ERP projects.",
+  alternates: { canonical: siteUrl },
   icons: { icon: "/personal-website/favicon.svg", shortcut: "/personal-website/favicon.svg" },
-  openGraph: { title: "Armadi Gonta · Senior iOS Engineer", description: "Mobile systems that scale.", type: "website", images: ["/personal-website/og.jpg"] },
-  twitter: { card: "summary_large_image", title: "Armadi Gonta · Senior iOS Engineer", description: "Mobile systems that scale.", images: ["/personal-website/og.jpg"] },
+  openGraph: {
+    title: "Armadi Gonta · Senior iOS Engineer",
+    description: "Mobile systems that scale.",
+    type: "website",
+    url: siteUrl,
+    siteName: "Armadi Gonta",
+    locale: "en_US",
+    images: [ogImage],
+  },
+  twitter: { card: "summary_large_image", title: "Armadi Gonta · Senior iOS Engineer", description: "Mobile systems that scale.", images: [ogImage] },
 };
 
 const personSchema = {
