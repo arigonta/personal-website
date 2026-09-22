@@ -1,3 +1,4 @@
+import Script from "next/script";
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -63,7 +64,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <body className={`${geist.variable} ${mono.variable}`}>
         {children}
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }} />
-        <script async src="https://gc.zgo.at/count.js" data-goatcounter="https://arigonta.goatcounter.com/count" />
+        <Script strategy="afterInteractive" src="https://gc.zgo.at/count.js" data-goatcounter="https://arigonta.goatcounter.com/count" />
       </body>
     </html>
   );

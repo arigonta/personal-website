@@ -1,3 +1,5 @@
+import Script from "next/script";
+
 const projects = [
   {
     index: "01",
@@ -231,7 +233,7 @@ export default function Home() {
       <div className="navBar">
       <nav className="nav shell" aria-label="Primary navigation">
         <a className="brand" href="#top" aria-label="Armadi Gonta home">
-          Armadi Gonta<span>.</span>
+          ag<span>.</span>
         </a>
         <div className="navLinks">
           <a href="#work">Selected work</a>
@@ -253,7 +255,7 @@ export default function Home() {
         </details>
       </nav>
       </div>
-      <script
+      <Script id="portfolio-interactions" strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html:
             "document.addEventListener('click',function(e){var a=e.target.closest('.mobileLinks a');if(a)a.closest('details').removeAttribute('open')});" +
@@ -280,7 +282,7 @@ export default function Home() {
 
       <section className="hero shell" id="top">
         <p className="eyebrow"><span>Senior iOS Engineer</span> Jakarta, Indonesia</p>
-        <h1>Mobile systems<br />that <em>scale.</em></h1>
+        <div className="heroTitle"><h1>Armadi<br /><span>Gonta<span className="nameDot">.</span></span></h1><div className="heroAside"><p>From the first line of code<br />to the App Store.</p><a href="#work">A selection of my work <span>↓</span></a></div></div>
         <div className="heroLower">
           <div className="heroCopy">
             <p className="intro">
@@ -352,9 +354,8 @@ export default function Home() {
                       <rect x="90" y="62" width="26" height="14" rx="3" fill="#43d9ff" opacity="0.85" />
                     </svg>
                   )}
-                  <div className="signalLines"><i /><i /><i /></div>
                 </div>
-                <div className="projectMeta"><p className="projectType">{project.type}</p><time dateTime={project.start}>{project.period}</time></div><h3>{project.title}</h3><p className="projectRole"><span>Role</span>{project.role}</p><p>{project.summary}</p>
+                <h3>{project.title}</h3><div className="projectMeta"><p className="projectType">{project.type}</p><time dateTime={project.start}>{project.period}</time></div><p className="projectRole"><span>Role</span>{project.role}</p><p>{project.summary}</p>
                 <div className="tags">{project.tags.map((tag) => <span key={tag}>{tag}</span>)}</div>
               </>
             );
@@ -383,7 +384,7 @@ export default function Home() {
           <p>02 / Experience</p>
           <h2>From implementation<br />to <em>direction.</em></h2>
           <p className="sectionNote">
-            Seven-plus years across banking, insurance, telco, and travel, from hands-on feature work to leading iOS teams and owning delivery end to end.
+            Seven-plus years of hands-on engineering, from native feature development to architecture, release readiness, and iOS delivery leadership.
           </p>
         </div>
         <div className="timeline">
@@ -420,7 +421,7 @@ export default function Home() {
           <p>03 / Services</p>
           <h2>Building products<br />for <em>your business.</em></h2>
           <p className="sectionNote">
-            Alongside my full-time engineering work I take on selected freelance and contract projects: mobile apps, websites and web applications, and internal business systems, delivered with the same architecture, security, and release discipline I apply to enterprise banking products.
+            Selected freelance and contract projects alongside full-time engineering work: mobile apps, websites, and internal business systems, delivered with enterprise architecture, security, and release discipline.
           </p>
         </div>
         <div className="serviceGrid">
