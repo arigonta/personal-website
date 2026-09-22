@@ -77,6 +77,17 @@ Use these facts as the source of truth. Preserve the distinctions between joinin
 - Internal application with no public App Store listing. Do not fabricate a link; its card is labeled "Internal".
 - The card uses the Allianz corporate logo, since Inspire has no public product mark.
 
+### Kachimen
+
+- Product: Kachimen (カチメン), a Japanese AI interview practice and screening video analysis app published by CAC Corporation. App Store category: Education. On the App Store since October 2023.
+- Project period: September 2025 to present, confirmed by Armadi.
+- Role: iOS Engineer on an established product. Armadi joined after the app was already live and works alongside other engineers; do not imply he built it from scratch or owns it.
+- Contributions include mock interview and training flows (camera, microphone, and speech permission handling, video playback), authentication and verification code flows, iOS 26 support, crash and stability fixes, and keeping behaviour aligned with the Android client.
+- The exact version range Armadi contributed to is not documented, so the role line does not state one.
+- Do not publish unreleased R&D work (for example the thermal reduction experiment), backend details, or client internals.
+- The card uses the official app icon (`kachimen.png`, `markIcon`), taken from the client repository's AppIcon and matching the App Store artwork.
+- No experience timeline row: the engagement's employer is not documented, the same as SingHealth EMOS v4.
+
 ### Restaurant POS (unnamed client)
 
 - Project period: September 2026 to present. Active development, not released.
@@ -95,6 +106,7 @@ Verified via the iTunes Search API. Use these exact URLs when linking project ca
 - Wondr by BNI: https://apps.apple.com/id/app/wondr-by-bni/id6499518320
 - Livin' by Mandiri: https://apps.apple.com/id/app/livin-by-mandiri/id1555414743
 - MyTelkomsel: https://apps.apple.com/id/app/mytelkomsel/id651412430
+- Kachimen: https://apps.apple.com/jp/app/id6461690440 (Japan storefront; the short form redirects to the full localized URL)
 - SingHealth EMOS v4 is an internal enterprise app with no public App Store listing. Do not fabricate a link; its card is labeled "Enterprise".
 - Pegipegi, Allianz Inspire, and the Restaurant POS project have no public listing either. Do not fabricate links for them.
 
@@ -122,7 +134,7 @@ Timeline rows are not links; do not add decorative arrows that imply clickabilit
 ## Selected work section copy
 
 - Heading: "Built from scratch, or joined mid-flight." The section deliberately distinguishes products Armadi helped build from the ground up from established apps he joined and contributed to. Do not flatten this back into a single "products built" claim.
-- Each project carries an explicit `badge` shown in the card header: "App Store ↗" for linked apps, "Enterprise" for SingHealth EMOS v4, "Archived" for Pegipegi, "Internal" for Allianz Inspire, "In development" for the Restaurant POS project. Do not derive the badge from whether a link exists.
+- Each project carries an explicit `badge` shown in the card header: "App Store ↗" for linked apps (Wondr, Livin', MyTelkomsel, Kachimen), "Enterprise" for SingHealth EMOS v4, "Archived" for Pegipegi, "Internal" for Allianz Inspire, "In development" for the Restaurant POS project. Do not derive the badge from whether a link exists.
 - Cards for products joined mid-development state the exact scope in the role line (releases, or version ranges such as "v2.9 – v3.4").
 
 ## Services section copy
@@ -151,9 +163,9 @@ Section "03 / Services" sits between Core capabilities and the contact footer. I
 
 ## Hero metrics
 
-The hero metric strip reads "7+ years delivering mobile products", "5 enterprise product domains", and "6 products shipped to production". The "products shipped" count covers released products only, so the in-development Restaurant POS project is excluded. Update the count when a project actually ships.
+The hero metric strip reads "7+ years delivering mobile products", "6 enterprise product domains", and "7 products shipped to production". The "products shipped" count covers released products only, so the in-development Restaurant POS project is excluded. Update the count when a project actually ships.
 
-The five domains are banking, insurance, healthcare, telco, and travel. They are named once, in the hero intro paragraph, and the metric strip stays numeric so the two never drift apart. Do not list a partial subset of the domains anywhere.
+The six domains are banking, insurance, healthcare, telco, travel, and HR tech (Kachimen). They are named once, in the hero intro paragraph, and the metric strip stays numeric so the two never drift apart. Do not list a partial subset of the domains anywhere.
 
 ## Content rules
 
@@ -161,7 +173,7 @@ The five domains are banking, insurance, healthcare, telco, and travel. They are
 - Never use em dashes (—) anywhere in site copy, headings, roles, or metadata. Armadi considers them an AI-writing tell. Rewrite with commas, colons, periods, or middle dots (·). Date and release ranges use an en dash (e.g. "Jun 2023 – Present", "R3–R7").
 - Use first-person copy only in the hero/introduction. Project cards should use concise factual descriptions.
 - Avoid unsupported impact numbers and exaggerated claims.
-- Keep company and product capitalization exact: Wondr by BNI, Livin' by Mandiri, MyTelkomsel, and SingHealth EMOS v4.
+- Keep company and product capitalization exact: Wondr by BNI, Livin' by Mandiri, MyTelkomsel, SingHealth EMOS v4, and Kachimen.
 - Keep the resume download and contact links working.
 - Do not add confidential implementation details, internal endpoints, credentials, client data, or unreleased product information.
 - Never commit tokens, passwords, private keys, or GitHub credentials. If a credential appears in chat or terminal output, instruct the user to revoke it immediately.
@@ -174,7 +186,7 @@ The five domains are banking, insurance, healthcare, telco, and travel. They are
 - Palette: near-black backgrounds, cobalt blue, and electric cyan.
 - Typography: Geist for display/body and Geist Mono for technical labels.
 - The hero is typographic: eyebrow, oversized headline, intro, actions, and a metric column separated by a rule. There is no device mockup. The previous hero rendered an invented banking app with fabricated figures ("System health 99.9%"), which contradicted the evidence-based rule above, so do not reintroduce a simulated product UI.
-- Directly under the hero, a "Shipped to production" line names the released products as plain text, linking the three with public App Store pages. It is derived from the `projects` array, so a product joins it automatically once it has a logo and is no longer badged "In development".
+- Directly under the hero, a "Shipped to production" line names the released products as plain text, linking the four with public App Store pages. It is derived from the `projects` array, so a product joins it automatically once it has a logo and is no longer badged "In development".
 - Do not use App Store screenshots. They are marketing composites, not app screens: they carry baked-in slogans, brand-coloured backgrounds, pre-drawn device frames, award badges, and in Livin’s case Bank Mandiri’s OJK regulatory disclaimer, which on a personal site would imply an endorsement that does not exist. MyTelkomsel’s current screenshots also show a much later version than the one Armadi worked on.
 - Selected Work leads with the first `FEATURED_COUNT` projects (currently 2) as full width, two column cards: Wondr by BNI and SingHealth EMOS v4, the two Armadi owned end to end. The rest stay in the compact two column grid. Changing `FEATURED_COUNT` is enough to refeature; the orphan-spanning rule adapts on its own.
 - `.projectCard` and `.projectCardFeatured` have equal specificity, so the featured rules must stay after the base card rule in `app/globals.css` or the two column layout silently reverts to flex.
@@ -186,7 +198,7 @@ The five domains are banking, insurance, healthcare, telco, and travel. They are
 - `pegipegi.png` and `allianz.svg` were sourced from Wikimedia Commons, because neither app has a live App Store listing to pull artwork from.
 - The primary navigation sits in a full-bleed sticky bar (`.navBar`) so it stays reachable down a long page. A small inline IntersectionObserver in `app/page.tsx` sets `aria-current` on the nav link for the section in view. Anchor offsets are handled with `scroll-padding-top`, so keep it in sync if the bar height changes.
 - Text below roughly 9px is reserved for the decorative phone mock. Real copy, labels, chips, and dates stay at 9px or larger and at or above a 4.5:1 contrast ratio on their background.
-- Selected Work is a two column grid. When the project count is odd the last card gets `projectCardWide` and spans the full row, so no card is left stranded beside an empty cell.
+- Selected Work is a two column grid. When the count after the featured cards is odd the last card gets `projectCardWide` and spans the full row, so no card is left stranded beside an empty cell. Ordering after the featured pair: App Store linked apps first (Livin', MyTelkomsel, Kachimen), then the unlinked ones (Pegipegi, Allianz Inspire, Restaurant POS).
 - Preserve responsive behavior and `prefers-reduced-motion` support.
 - Do not replace official logos with generated approximations.
 

@@ -69,6 +69,23 @@ const projects = [
   },
   {
     index: "05",
+    title: "Kachimen",
+    logo: "./logos/kachimen.png",
+    logoWidth: 288,
+    logoHeight: 288,
+    mark: "markIcon",
+    badge: "App Store ↗",
+    link: "https://apps.apple.com/jp/app/id6461690440",
+    type: "AI interview practice · Japan",
+    period: "Sep 2025 – Present",
+    start: "2025-09",
+    role: "iOS Engineer · Ongoing releases of the live app",
+    summary:
+      "Joined Kachimen, a Japanese AI interview practice and screening video analysis app already live on the App Store, contributing to mock interview and training flows, authentication, iOS 26 support, and crash and stability fixes while keeping behaviour aligned with the Android client.",
+    tags: ["Swift", "UIKit", "Camera & audio", "HR tech"],
+  },
+  {
+    index: "06",
     title: "Pegipegi",
     logo: "./logos/pegipegi.png",
     logoWidth: 2098,
@@ -85,7 +102,7 @@ const projects = [
     tags: ["Swift", "Objective-C", "Travel", "Feature delivery"],
   },
   {
-    index: "06",
+    index: "07",
     title: "Allianz Inspire",
     logo: "./logos/allianz.svg",
     logoWidth: 300,
@@ -102,7 +119,7 @@ const projects = [
     tags: ["Swift", "Insurance", "Native iOS", "In-house"],
   },
   {
-    index: "07",
+    index: "08",
     title: "Restaurant POS",
     logo: null,
     logoWidth: 0,
@@ -267,7 +284,7 @@ export default function Home() {
         <div className="heroLower">
           <div className="heroCopy">
             <p className="intro">
-              I’m Armadi Gonta, a Senior iOS Engineer with 7+ years building secure, high-scale products across digital banking, insurance, healthcare, telco, and travel.
+              I’m Armadi Gonta, a Senior iOS Engineer with 7+ years building secure, high-scale products across digital banking, insurance, healthcare, telco, travel, and HR tech.
             </p>
             <p className="intro introSecondary">
               Most recently I helped build Wondr by BNI from proof-of-concept to its current App Store release, and independently delivered the SingHealth EMOS v4 iPadOS app, with a focus on architecture, app security, and release readiness.
@@ -279,8 +296,8 @@ export default function Home() {
           </div>
           <div className="metrics" aria-label="Career highlights">
             <div><strong>7+</strong><span>Years delivering<br />mobile products</span></div>
-            <div><strong>5</strong><span>Enterprise<br />product domains</span></div>
-            <div><strong>6</strong><span>Products shipped<br />to production</span></div>
+            <div><strong>6</strong><span>Enterprise<br />product domains</span></div>
+            <div><strong>7</strong><span>Products shipped<br />to production</span></div>
           </div>
         </div>
       </section>
